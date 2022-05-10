@@ -45,37 +45,34 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  -- use "ur4ltz/surround.nvim"
-  use {
-    "ur4ltz/surround.nvim",
-    config = function()
-      require"surround".setup {mappings_style = "surround"}
-    end
-  }
+  use "ur4ltz/surround.nvim" -- Easily surround text
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use 'karb94/neoscroll.nvim'
-  use "arithran/vim-delete-hidden-buffers"
   use "goolord/alpha-nvim"
-  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "iamcco/markdown-preview.nvim"
   use {"ellisonleao/glow.nvim", branch = 'main'}
   use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
 --  use "lukas-reineke/indent-blankline.nvim"
 
+  -- vim plugins (not nvim)
+  use "moll/vim-bbye"
+  use "arithran/vim-delete-hidden-buffers"
+
   -- Colorschemes
-  use "sainnhe/gruvbox-material"
   use "luisiacc/gruvbox-baby"
+  use "sainnhe/gruvbox-material"
   use "ellisonleao/gruvbox.nvim"
+
   use 'folke/lsp-colors.nvim' -- Adds color support for lsp highlighting if needed
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
