@@ -145,7 +145,7 @@ ins_left {
       return token
     end
   end,
-  color = { fg = colors.red, gui = 'bold' },
+  color = { fg = colors.yellow, gui = 'bold' },
 }
 
 ins_left {
