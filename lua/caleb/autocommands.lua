@@ -1,4 +1,12 @@
 vim.cmd [[
+  augroup _general_settings
+    autocmd!
+    autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
+    autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200})
+    autocmd BufWinEnter * :set formatoptions-=cro
+    autocmd FileType qf set nobuflisted
+  augroup end
+
   augroup _nvim_treesitter
     autocmd!
     autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
@@ -24,6 +32,13 @@ vim.cmd [[
   augroup _alpha
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
+
+    fun! FindNumBuffers()
+      let bufs_open = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+      return bufs_open
+    endfun
+
+    autocmd BufDelete * :Alpha if FindNumBuffers() == 0 | endif
   augroup end
 
   augroup _whitespace
@@ -39,3 +54,9 @@ vim.cmd [[
     autocmd BufWritePre * :call TrimWhitespace()
   augroup end
 ]]
+
+-- Autoformat
+-- augroup _lsp
+--   autocmd!
+--   autocmd BufWritePre * lua vim.lsp.buf.formatting()
+-- augroup end
