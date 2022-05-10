@@ -1,0 +1,1 @@
+-- Run :GlowInstall in nvim to install locally
