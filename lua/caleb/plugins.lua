@@ -63,8 +63,8 @@ return packer.startup(function(use)
 --  use "lukas-reineke/indent-blankline.nvim"
 
   -- vim plugins (not nvim)
-  use "moll/vim-bbye"
-  use "arithran/vim-delete-hidden-buffers"
+  use "moll/vim-bbye" -- preserve splits when closing buffers
+  use "arithran/vim-delete-hidden-buffers"  -- allow closing all but current buffer
 
   -- Colorschemes
   use "luisiacc/gruvbox-baby"
