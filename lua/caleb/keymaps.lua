@@ -17,12 +17,6 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-
 -- Assign leader-d + vim direction to navigate windows, or,
 -- if window doesn't exist in that direction, create one.
 keymap("n", "<leader>dh", ":call WinMove('h')<CR>", opts)
@@ -71,10 +65,6 @@ keymap("v", "p", '"_dP', opts)
 -- Move to Beginning/End of line
 keymap("v", "<S-h>", "0", opts)
 keymap("v", "<S-l>", "$", opts)
-
--- Stay in indent mode
---keymap("v", "<", "<gv", opts)
---keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
 --keymap("v", "<A-j>", ":m .+1<CR>==", opts)
