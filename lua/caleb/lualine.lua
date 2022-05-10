@@ -186,7 +186,7 @@ ins_left {
 }
 
 -- Add components to right sections
-ins_right { progress, color = { fg = colors.blue, gui = 'bold' } }
+ins_right { progress, color = { fg = colors.yellow, gui = 'bold' } }
 -- ins_right { progress, color = { fg = colors.fg, gui = 'bold' } }
 
 ins_right { 'location' }
