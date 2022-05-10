@@ -68,13 +68,14 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "iamcco/markdown-preview.nvim"
   use {"ellisonleao/glow.nvim", branch = 'main'}
+  use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
 --  use "lukas-reineke/indent-blankline.nvim"
 
   -- Colorschemes
   use "sainnhe/gruvbox-material"
   use "luisiacc/gruvbox-baby"
   use "ellisonleao/gruvbox.nvim"
-  use 'folke/lsp-colors.nvim'
+  use 'folke/lsp-colors.nvim' -- Adds color support for lsp highlighting if needed
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
