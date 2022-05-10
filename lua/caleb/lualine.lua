@@ -138,6 +138,17 @@ ins_left {
 }
 
 ins_left {
+  -- function() return vim.fn.getcwd() end, -- this returns cwd
+  function()
+    local cwd_string = tostring(vim.fn.getcwd())
+    for token in string.gmatch(cwd_string, "[^/]+$") do
+      return token
+    end
+  end,
+  color = { fg = colors.red, gui = 'bold' },
+}
+
+ins_left {
   'filename',
   cond = conditions.buffer_not_empty,
   color = { fg = colors.magenta, gui = 'bold' },
@@ -185,11 +196,13 @@ ins_left {
   color = { fg = '#ffffff', gui = 'bold' },
 }
 
+
 -- Add components to right sections
 ins_right { progress, color = { fg = colors.yellow, gui = 'bold' } }
 -- ins_right { progress, color = { fg = colors.fg, gui = 'bold' } }
 
 ins_right { 'location' }
+
 
 ins_right {
   'o:encoding', -- option component same as &encoding in viml
