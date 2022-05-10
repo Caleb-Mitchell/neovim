@@ -1,5 +1,7 @@
 require "caleb.impatient"
 require "caleb.plugins"
+require "caleb.surround"
+require "caleb.markdownpreview"
 require "caleb.options"
 require "caleb.keymaps"
 require "caleb.colorscheme"
