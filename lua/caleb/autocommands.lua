@@ -33,19 +33,6 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
-
-  augroup _whitespace
-    autocmd!
-    " Trim whitespace function
-    fun! TrimWhitespace()
-      let l:save = winsaveview()
-      keeppatterns %s/\s\+$//e
-      call winrestview(l:save)
-    endfun
-
-    " Set autocommand for whitespace function
-    autocmd BufWritePre * :call TrimWhitespace()
-  augroup end
 ]]
 
 -- Autoformat
