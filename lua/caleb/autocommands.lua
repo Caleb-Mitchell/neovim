@@ -32,13 +32,6 @@ vim.cmd [[
   augroup _alpha
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
-
-    fun! FindNumBuffers()
-      let bufs_open = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
-      return bufs_open
-    endfun
-
-    autocmd BufDelete * :Alpha if FindNumBuffers() == 0 | endif
   augroup end
 
   augroup _whitespace
@@ -50,7 +43,7 @@ vim.cmd [[
       call winrestview(l:save)
     endfun
 
-    " Set autogroup for whitespace function
+    " Set autocommand for whitespace function
     autocmd BufWritePre * :call TrimWhitespace()
   augroup end
 ]]
