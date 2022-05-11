@@ -46,7 +46,7 @@ local config = {
       normal = { c = { fg = colors.fg, bg = colors.bg } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
-    -- theme = "gruvbox-baby",
+    globalstatus = true,
   },
   sections = {
     -- these are to remove the defaults
@@ -202,7 +202,6 @@ ins_right { progress, color = { fg = colors.yellow, gui = 'bold' } }
 -- ins_right { progress, color = { fg = colors.fg, gui = 'bold' } }
 
 ins_right { 'location' }
-
 
 ins_right {
   'o:encoding', -- option component same as &encoding in viml
