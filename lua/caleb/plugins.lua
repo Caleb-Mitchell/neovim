@@ -117,6 +117,11 @@ return packer.startup(function(use)
       run = function() vim.fn['firenvim#install'](0) end
   }
 
+  -- Extra
+  use "seandewar/nvimesweeper"
+  use "seandewar/killersheep.nvim"
+  use "ellisonleao/weather.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
