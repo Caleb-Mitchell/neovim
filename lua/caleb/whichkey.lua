@@ -193,6 +193,12 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  w = {
+    name = "Weather/Wiki",
+    o = { "<cmd>Weather<cr>", "Weather Open"},
+    c = { "<cmd>WeatherClose<cr>", "Weather Close"},
+  },
 }
 
 which_key.setup(setup)
