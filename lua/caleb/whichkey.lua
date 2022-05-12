@@ -196,8 +196,13 @@ local mappings = {
 
   w = {
     name = "Weather/Wiki",
-    o = { "<cmd>Weather<cr>", "Weather Open"},
-    c = { "<cmd>WeatherClose<cr>", "Weather Close"},
+    o = { "<cmd>Weather<cr>", "Weather"},
+  },
+  z = {
+    name = "Misc/Games",
+    c = { "<cmd>ColorizerToggle<cr>", "Colorizer" },
+    m = { "<cmd>Nvimesweeper<cr>", "Minesweeper" },
+    k = { "<cmd>KillKillKill<cr>", "Killer Sheep" },
   },
 }
 
