@@ -57,9 +57,10 @@ return packer.startup(function(use)
   use 'karb94/neoscroll.nvim'
   use "goolord/alpha-nvim"
   use "folke/which-key.nvim"
-  use "iamcco/markdown-preview.nvim"
-  use {"ellisonleao/glow.nvim", branch = 'main'}
   use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
+  use { "norcalli/nvim-colorizer.lua", opt = true, cmd = { "ColorizerToggle" } }    -- Preview colors in-file
+  use { "iamcco/markdown-preview.nvim", opt = true, ft = { "markdown" } }           -- Preview markdown in browser
+  use { "ellisonleao/glow.nvim", branch = 'main', opt = true, ft = { "markdown" } } -- Preview markdown in vim window
 --  use "lukas-reineke/indent-blankline.nvim"
 
   -- vim plugins (not nvim)
@@ -111,16 +112,10 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
-  -- Firenvim
-  use {
-      'glacambre/firenvim',
-      run = function() vim.fn['firenvim#install'](0) end
-  }
-
   -- Extra
-  use "seandewar/nvimesweeper"
-  use "seandewar/killersheep.nvim"
-  use "ellisonleao/weather.nvim"
+  use { "seandewar/nvimesweeper", opt = true, cmd = { "Nvimesweeper" } } -- Play minesweeper
+  use { "seandewar/killersheep.nvim", opt = true, cmd = { "KillKillKill" } } -- Play killer sheep
+  use { "ellisonleao/weather.nvim", opt = true, cmd = { "Weather" } } -- Display weather in pop up
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
