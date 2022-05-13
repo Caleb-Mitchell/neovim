@@ -93,6 +93,10 @@ M.on_attach = function(client, bufnr)
   if client.name == "solargraph" then
     client.resolved_capabilities.document_formatting = true
   end
+  -- document_highlight currently creates an error in bashls, supressing for now
+  if client.name == "bashls" then
+    client.resolved_capabilities.document_highlight = false
+  end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
