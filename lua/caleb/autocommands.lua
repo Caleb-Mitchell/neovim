@@ -1,7 +1,8 @@
 vim.cmd [[
-  augroup _remember folds
-    autocmd BufWinLeave *.* mkview
-    autocmd BufWinEnter *.* silent loadview
+  augroup _remember_folds
+      autocmd!
+      autocmd BufWinLeave ?* mkview | filetype detect
+      autocmd BufWinEnter ?* silent loadview | filetype detect
   augroup end
 
   augroup _general_settings
