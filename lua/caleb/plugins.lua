@@ -61,6 +61,13 @@ return packer.startup(function(use)
   use { "norcalli/nvim-colorizer.lua", opt = true, cmd = { "ColorizerToggle" } }    -- Preview colors in-file
   use { "iamcco/markdown-preview.nvim", opt = true, ft = { "markdown" } }           -- Preview markdown in browser
   use { "ellisonleao/glow.nvim", branch = 'main', opt = true, ft = { "markdown" } } -- Preview markdown in vim window
+  use { 'anuvyklack/pretty-fold.nvim',
+     requires = 'anuvyklack/nvim-keymap-amend', -- only for preview
+     config = function()
+        require('pretty-fold').setup()
+        require('pretty-fold.preview').setup()
+     end
+  }
 --  use "lukas-reineke/indent-blankline.nvim"
 
   -- vim plugins (not nvim)
