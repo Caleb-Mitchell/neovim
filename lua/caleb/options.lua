@@ -1,4 +1,5 @@
 local options = {
+  viewdir = "/home/caleb/.config/nvim/viewdir/",
   backup = false,                          -- creates a backup file
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
