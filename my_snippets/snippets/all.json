@@ -1,0 +1,26 @@
+{
+	"PEDAC": {
+		"prefix": "ped",
+    "description": "Display pedac",
+		"body": [
+			"=begin\n",
+      "== Problem ==",
+			"- $1\n",
+      "Input: $2",
+      "Output: $3\n",
+      "Rules/Requirements",
+      "- $4\n",
+      "Mental Model",
+      "- $5\n",
+			"== Examples/Test Cases ==",
+			"$6\n",
+      "== Data Structure(s) ==",
+      "- $7\n",
+      "== Algorithm ==\n",
+      "$8\n",
+      "== Code (with intent) ==\n",
+      "$9\n",
+      "=end"
+		]
+  }
+}
