@@ -17,6 +17,9 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- Assign ctrl-/ to comment out individual lines
+keymap("n", "<C-_>", '<Plug>(comment_toggle_current_linewise)', opts)
+
 -- Assign leader-d + vim direction to navigate windows, or,
 -- if window doesn't exist in that direction, create one.
 keymap("n", "<leader>dh", ":call WinMove('h')<CR>", opts)
@@ -71,6 +74,9 @@ keymap("v", "<S-l>", "$", opts)
 --keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Visual Block --
+-- Assign ctrl-/ to comment out visual blocked lines
+keymap("x", "<C-_>", '<Plug>(comment_toggle_linewise_visual)', opts)
+
 -- Move text up and down
 --keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 --keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
