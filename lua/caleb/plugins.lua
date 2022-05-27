@@ -70,6 +70,7 @@ return packer.startup(function(use)
         require('pretty-fold.preview').setup()
      end
   }
+  use {'is0n/jaq-nvim'}
 --  use "lukas-reineke/indent-blankline.nvim"
 
   -- vim plugins (not nvim)
