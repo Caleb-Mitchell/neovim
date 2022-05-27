@@ -7,12 +7,12 @@ setlocal fdi=#
 setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
-setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 12) / 24)
+setlocal fen
+let s:l = 25 - ((24 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 25
 normal! 0
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch

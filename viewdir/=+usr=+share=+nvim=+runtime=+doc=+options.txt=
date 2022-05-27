@@ -10,12 +10,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 23 - ((22 * winheight(0) + 33) / 67)
+let s:l = 23 - ((10 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 23
-normal! 034|
+normal! 033|
 lcd /usr/share/nvim/runtime/doc
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
