@@ -9,14 +9,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-4,11fold
 let &fdl = &fdl
-let s:l = 25 - ((12 * winheight(0) + 15) / 31)
+let s:l = 4 - ((3 * winheight(0) + 33) / 67)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 25
-normal! 04|
+keepjumps 4
+normal! 010|
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
 doautoall SessionLoadPost
