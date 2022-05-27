@@ -59,7 +59,9 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
   use { "norcalli/nvim-colorizer.lua", opt = true, cmd = { "ColorizerToggle" } }    -- Preview colors in-file
-  use { "iamcco/markdown-preview.nvim", opt = true, ft = { "markdown" } }           -- Preview markdown in browser
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, opt = true, ft = { "markdown" }, })
+
   use { "ellisonleao/glow.nvim", branch = 'main', opt = true, ft = { "markdown" } } -- Preview markdown in vim window
   use { 'anuvyklack/pretty-fold.nvim',
      requires = 'anuvyklack/nvim-keymap-amend', -- only for preview
