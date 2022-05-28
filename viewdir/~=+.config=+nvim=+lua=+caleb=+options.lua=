@@ -23,12 +23,14 @@ normal! zo
 normal! zo
 5
 normal! zo
-let s:l = 2 - ((1 * winheight(0) + 15) / 31)
+5
+normal! zo
+let s:l = 36 - ((21 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
-normal! 0105|
+keepjumps 36
+normal! 02|
 let &g:so = s:so_save | let &g:siso = s:siso_save
 nohlsearch
 doautoall SessionLoadPost
