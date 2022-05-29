@@ -10,14 +10,13 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 23 - ((10 * winheight(0) + 15) / 31)
+let s:l = 1356 - ((8 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 23
-normal! 031|
+keepjumps 1356
+normal! 049|
 lcd /usr/share/nvim/runtime/doc
 let &g:so = s:so_save | let &g:siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 " vim: set ft=vim :
