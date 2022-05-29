@@ -77,6 +77,9 @@ keymap("v", "<S-l>", "$", opts)
 -- Assign ctrl-/ to comment out visual blocked lines
 keymap("x", "<C-_>", '<Plug>(comment_toggle_linewise_visual)', opts)
 
+-- Assign ,y to yank without newlines (useful for wrapped text in markdown files)
+keymap("x", ",y", ":<C-U>let oldtw=&textwidth<cr> :<C-U>set textwidth=1000<cr> gvgqgvy :let &textwidth=oldtw<cr> :set textwidth?<cr> gvgq", opts)
+
 -- Move text up and down
 --keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 --keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
