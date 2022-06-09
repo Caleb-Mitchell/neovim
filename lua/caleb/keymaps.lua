@@ -22,10 +22,10 @@ keymap("n", "<C-_>", '<Plug>(comment_toggle_current_linewise)', opts)
 
 -- Assign leader-d + vim direction to navigate windows, or,
 -- if window doesn't exist in that direction, create one.
-keymap("n", "<leader>dh", ":call WinMove('h')<CR>", opts)
-keymap("n", "<leader>dj", ":call WinMove('j')<CR>", opts)
-keymap("n", "<leader>dk", ":call WinMove('k')<CR>", opts)
-keymap("n", "<leader>dl", ":call WinMove('l')<CR>", opts)
+keymap("n", "<leader><leader>h", ":call WinMove('h')<CR>", opts)
+keymap("n", "<leader><leader>j", ":call WinMove('j')<CR>", opts)
+keymap("n", "<leader><leader>k", ":call WinMove('k')<CR>", opts)
+keymap("n", "<leader><leader>l", ":call WinMove('l')<CR>", opts)
 vim.cmd [[
 function! WinMove(key)
     let t:curwin = winnr()
