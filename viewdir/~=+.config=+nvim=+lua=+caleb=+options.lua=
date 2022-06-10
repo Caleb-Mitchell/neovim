@@ -25,11 +25,11 @@ normal! zo
 normal! zo
 5
 normal! zo
-let s:l = 1 - ((0 * winheight(0) + 15) / 31)
+let s:l = 5 - ((4 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 5
 normal! 0
 lcd ~/.config/nvim
 let &g:so = s:so_save | let &g:siso = s:siso_save
