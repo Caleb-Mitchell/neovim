@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-jaqnvim.setup{
+jaqnvim.setup {
 	-- Commands used with 'Jaq'
 	cmds = {
 		-- Default UI used (see `Usage` for options)
