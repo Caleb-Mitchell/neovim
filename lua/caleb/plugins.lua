@@ -70,7 +70,8 @@ return packer.startup(function(use)
         require('pretty-fold.preview').setup()
      end
   }
-  use {'is0n/jaq-nvim'}
+  use {'is0n/jaq-nvim'} -- Run current code in quickfix menuone
+  use 'rcarriga/nvim-notify'
 --  use "lukas-reineke/indent-blankline.nvim"
 
   use {
@@ -100,7 +101,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
- 	use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+ 	use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'} -- Provide AI powered completion
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -140,4 +141,5 @@ return packer.startup(function(use)
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
+  vim.notify("Plugin Sync Complete!", "info")
 end)
