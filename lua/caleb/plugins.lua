@@ -73,6 +73,15 @@ return packer.startup(function(use)
   use {'is0n/jaq-nvim'}
 --  use "lukas-reineke/indent-blankline.nvim"
 
+  use {
+    "folke/todo-comments.nvim", -- Highlight todos, and provide command to search all todos
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+      }
+    end
+  }
+
   -- vim plugins (not nvim)
   use "moll/vim-bbye" -- preserve splits when closing buffers
   use "arithran/vim-delete-hidden-buffers"  -- allow closing all but current buffer
