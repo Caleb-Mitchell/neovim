@@ -78,11 +78,9 @@ return packer.startup(function(use)
   use "arithran/vim-delete-hidden-buffers"  -- allow closing all but current buffer
 
   -- Colorschemes
-  use "luisiacc/gruvbox-baby"
-  use "sainnhe/gruvbox-material"
   use "ellisonleao/gruvbox.nvim"
 
-  use 'folke/lsp-colors.nvim' -- Adds color support for lsp highlighting if needed
+  -- use 'folke/lsp-colors.nvim' -- Adds color support for lsp highlighting if needed
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   -- cmp plugins
