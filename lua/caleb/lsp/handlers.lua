@@ -93,6 +93,9 @@ M.on_attach = function(client, bufnr)
   if client.name == "solargraph" then
     client.resolved_capabilities.document_formatting = true
   end
+  if client.name == "html" then
+    client.resolved_capabilities.document_formatting = false
+  end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
