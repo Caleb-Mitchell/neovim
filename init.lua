@@ -1,6 +1,5 @@
 require "caleb.impatient"
 require "caleb.plugins"
-require "caleb.firenvim"
 require "caleb.surround"
 require "caleb.options"
 require "caleb.colorizer"
