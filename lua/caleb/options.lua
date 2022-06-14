@@ -3,6 +3,7 @@ local options = {
   backup = false,                          -- creates a backup file
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
+  -- cmdheight = 0,                           -- newest version of nvim required
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
