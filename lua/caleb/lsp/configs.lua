@@ -10,6 +10,7 @@ local servers = { "bashls",
                   "sumneko_lua",
                   "solargraph",
                   "html",
+                  "cssls",
                 }
 
 lsp_installer.setup {
