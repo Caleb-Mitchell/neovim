@@ -58,11 +58,11 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "folke/which-key.nvim"
   use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
-  use { "norcalli/nvim-colorizer.lua", opt = true, cmd = { "ColorizerToggle" } }    -- Preview colors in-file
+  use "norcalli/nvim-colorizer.lua" -- Preview colors in-file
 
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, opt = true, ft = { "markdown" }, })
+  use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end }
+  use { "ellisonleao/glow.nvim", branch = 'main' }-- Preview markdown in vim window
 
-  use { "ellisonleao/glow.nvim", branch = 'main', opt = true, ft = { "markdown" } } -- Preview markdown in vim window
   use { 'anuvyklack/pretty-fold.nvim',
      requires = 'anuvyklack/nvim-keymap-amend', -- only for preview
      config = function()
@@ -132,9 +132,9 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Extra
-  use { "seandewar/nvimesweeper", opt = true, cmd = { "Nvimesweeper" } } -- Play minesweeper
-  use { "seandewar/killersheep.nvim", opt = true, cmd = { "KillKillKill" } } -- Play killer sheep
-  use { "ellisonleao/weather.nvim", opt = true, cmd = { "Weather" } } -- Display weather in pop up
+  use "seandewar/nvimesweeper" -- Play minesweeper
+  use "seandewar/killersheep.nvim" -- Play killer sheep
+  use "ellisonleao/weather.nvim" -- Display weather in pop up
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
