@@ -142,5 +142,4 @@ return packer.startup(function(use)
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
-  vim.notify("Syncing Plugins!", "info")
 end)
