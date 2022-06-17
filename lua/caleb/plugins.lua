@@ -89,6 +89,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "ellisonleao/gruvbox.nvim"
+  use "luisiacc/gruvbox-baby"
 
   -- use 'folke/lsp-colors.nvim' -- Adds color support for lsp highlighting if needed
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
