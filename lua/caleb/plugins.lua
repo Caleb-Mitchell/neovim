@@ -63,13 +63,6 @@ return packer.startup(function(use)
   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end }
   use { "ellisonleao/glow.nvim", branch = 'main' }-- Preview markdown in vim window
 
-  use { 'anuvyklack/pretty-fold.nvim',
-     requires = 'anuvyklack/nvim-keymap-amend', -- only for preview
-     config = function()
-        require('pretty-fold').setup{ fill_char = '━' }
-        require('pretty-fold.preview').setup()
-     end
-  }
   use {'is0n/jaq-nvim'} -- Run current code in quickfix menuone
   use 'rcarriga/nvim-notify'
 --  use "lukas-reineke/indent-blankline.nvim"
