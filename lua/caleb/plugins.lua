@@ -72,8 +72,7 @@ return packer.startup(function(use)
     "folke/todo-comments.nvim", -- Highlight todos, and provide command to search all todos
     requires = "nvim-lua/plenary.nvim",
     config = function()
-      require("todo-comments").setup {
-      }
+      require("todo-comments").setup {}
     end
   }
 
@@ -85,6 +84,7 @@ return packer.startup(function(use)
   use "ellisonleao/gruvbox.nvim"
   use "luisiacc/gruvbox-baby"
 
+  use "xiyaowong/nvim-transparent"
   use 'folke/lsp-colors.nvim' -- Adds color support for lsp highlighting if needed
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
