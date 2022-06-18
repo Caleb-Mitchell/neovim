@@ -31,6 +31,7 @@ end
 
 -- Have packer use a popup window
 packer.init {
+  -- max_jobs = 1, -- in case of bad internet connection
   display = {
     open_fn = function()
       return require("packer.util").float { border = "rounded" }
