@@ -106,6 +106,7 @@ cmp.setup {
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
+        cmp_tabnine = "[Tabnine]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
