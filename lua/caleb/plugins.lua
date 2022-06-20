@@ -66,7 +66,7 @@ return packer.startup(function(use)
 
   use { "is0n/jaq-nvim" } -- Run current code in quickfix menuone
   use "rcarriga/nvim-notify"
---  use "lukas-reineke/indent-blankline.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
 
   use {
     "folke/todo-comments.nvim", -- Highlight todos, and provide command to search all todos
