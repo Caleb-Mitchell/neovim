@@ -55,17 +55,17 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
-  use 'karb94/neoscroll.nvim'
+  use "karb94/neoscroll.nvim"
   use "goolord/alpha-nvim"
   use "folke/which-key.nvim"
   use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
   use "norcalli/nvim-colorizer.lua" -- Preview colors in-file
 
   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end }
-  use { "ellisonleao/glow.nvim", branch = 'main' }-- Preview markdown in vim window
+  use { "ellisonleao/glow.nvim", branch = "main" }-- Preview markdown in vim window
 
-  use {'is0n/jaq-nvim'} -- Run current code in quickfix menuone
-  use 'rcarriga/nvim-notify'
+  use { "is0n/jaq-nvim" } -- Run current code in quickfix menuone
+  use "rcarriga/nvim-notify"
 --  use "lukas-reineke/indent-blankline.nvim"
 
   use {
@@ -84,7 +84,7 @@ return packer.startup(function(use)
   use "ellisonleao/gruvbox.nvim"
   use "luisiacc/gruvbox-baby"
 
-  use 'folke/lsp-colors.nvim' -- Adds color support for lsp highlighting if needed
+  use "folke/lsp-colors.nvim" -- Adds color support for lsp highlighting if needed
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   -- cmp plugins
@@ -95,7 +95,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
- 	use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'} -- Provide AI powered completion
+ 	use { "tzachar/cmp-tabnine", run="./install.sh", requires = "hrsh7th/nvim-cmp" } -- Provide AI powered completion
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -111,16 +111,13 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "p00f/nvim-ts-rainbow" -- enable rainbow parentheses
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Vimwiki
-  use 'vimwiki/vimwiki'
-  use 'michal-h21/vimwiki-sync'
+  use "vimwiki/vimwiki"
+  use "michal-h21/vimwiki-sync"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
