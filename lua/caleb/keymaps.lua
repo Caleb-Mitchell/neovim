@@ -18,7 +18,10 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Assign ctrl-/ to comment out individual lines
-keymap("n", "<C-_>", '<Plug>(comment_toggle_current_linewise)', opts)
+keymap("n", "<C-_>", "<Plug>(comment_toggle_current_linewise)", opts)
+
+-- Assign / to search with searchbox.nvim instead of builtin search
+keymap("n", "/", ":lua require('searchbox').incsearch()<CR>", opts)
 
 -- Assign leader-d + vim direction to navigate windows, or,
 -- if window doesn't exist in that direction, create one.

@@ -79,7 +79,9 @@ local opts = {
 }
 
 local mappings = {
+  [";"] = { "<C-^><cr>", "Last Buffer"},
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["A"] = { "<cmd>bufdo Bdelete <CR><cmd>Alpha<CR>", "Close All Buffers To Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers()<cr>",
     "Buffers",
@@ -89,16 +91,16 @@ local mappings = {
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["C"] = { "<cmd>DeleteHiddenBuffers<CR>", "Close All Buffers But One" },
-  ["A"] = { "<cmd>bufdo Bdelete <CR><cmd>Alpha<CR>", "Close All Buffers To Alpha" },
   -- ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd>Telescope find_files<cr>",
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-  [";"] = { "<C-^><cr>", "Last Buffer"},
   ["j"] = { "<cmd>Jaq<cr>", "Jaq" },
+  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  ["r"] = { "<cmd> lua require('searchbox').replace()<cr>", "Replace" },
+  ["R"] = { "<cmd> lua require('searchbox').replace({visual_mode = true})<cr>", "Replace Visual" },
   ["T"] = { "<cmd>TodoQuickFix<cr>", "TODOs" },
 
   p = {

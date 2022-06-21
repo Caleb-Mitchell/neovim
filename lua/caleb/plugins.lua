@@ -55,6 +55,12 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "akinsho/toggleterm.nvim"
   use "akinsho/bufferline.nvim"
+  use {                       -- Provide a pop up search/replace box
+    'VonHeikemen/searchbox.nvim',
+    requires = {
+      {'MunifTanjim/nui.nvim'}
+    }
+  }
 
   -- Formatting
   use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
