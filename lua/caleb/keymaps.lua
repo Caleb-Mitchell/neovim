@@ -23,6 +23,9 @@ keymap("n", "<C-_>", "<Plug>(comment_toggle_current_linewise)", opts)
 -- Assign / to search with searchbox.nvim instead of builtin search
 keymap("n", "/", ":lua require('searchbox').incsearch()<CR>", opts)
 
+-- Assign Space Space to triggle ColorizerToggle
+keymap("n", "<leader><leader>c", ":ColorizerToggle<CR>", opts)
+
 -- Assign leader-d + vim direction to navigate windows, or,
 -- if window doesn't exist in that direction, create one.
 keymap("n", "<leader><leader>h", ":call WinMove('h')<CR>", opts)
