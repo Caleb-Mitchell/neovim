@@ -171,7 +171,7 @@ local mappings = {
     name = "Markdown",
     m = { "<cmd>MarkdownPreviewToggle<cr>", "Markdown Preview Toggle"},
 
-    g = { "<cmd>Glow<cr>", "Glow" },
+    g = { "<cmd>Glow<cr><C-w>z <C-w>|<C-w>_", "Glow" },
   },
 
   s = {
