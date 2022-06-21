@@ -43,31 +43,32 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lualine/lualine.nvim"
+  use "ahmedkhalf/project.nvim"
+  use "lewis6991/impatient.nvim"
+
+  -- UI
+  use "goolord/alpha-nvim"
+  use "folke/which-key.nvim"
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
+  use "akinsho/toggleterm.nvim"
+  use "akinsho/bufferline.nvim"
+
+  -- Formatting
+  use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "ur4ltz/surround.nvim" -- Easily surround text
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
-  use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
-  use "ahmedkhalf/project.nvim"
-  use "lewis6991/impatient.nvim"
-  use "karb94/neoscroll.nvim"
-  use "goolord/alpha-nvim"
-  use "folke/which-key.nvim"
-  use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
-  use "norcalli/nvim-colorizer.lua" -- Preview colors in-file
 
+  -- markdown preview
   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end }
   use { "ellisonleao/glow.nvim", branch = "main" }-- Preview markdown in vim window
 
-  use { "is0n/jaq-nvim" } -- Run current code in quickfix menuone
+  -- Eye Candy
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "rcarriga/nvim-notify"
-  use "lukas-reineke/indent-blankline.nvim"
-
   use {
     "folke/todo-comments.nvim", -- Highlight todos, and provide command to search all todos
     requires = "nvim-lua/plenary.nvim",
@@ -75,17 +76,23 @@ return packer.startup(function(use)
       require("todo-comments").setup {}
     end
   }
+  use "j-hui/fidget.nvim"
+  use "lukas-reineke/indent-blankline.nvim" -- Add visual for line column indentation
+  use "karb94/neoscroll.nvim"
+
+  use { "is0n/jaq-nvim" } -- Run current code in quickfix menuone
 
   -- vim plugins (not nvim)
   use "moll/vim-bbye" -- preserve splits when closing buffers
   use "arithran/vim-delete-hidden-buffers"  -- allow closing all but current buffer
 
-  -- Colorschemes
+  -- Colors
   use "ellisonleao/gruvbox.nvim"
   use "luisiacc/gruvbox-baby"
 
   use "folke/lsp-colors.nvim" -- Adds color support for lsp highlighting if needed
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+  use "norcalli/nvim-colorizer.lua" -- Preview colors in-file
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
