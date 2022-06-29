@@ -100,7 +100,6 @@ local mappings = {
   ["j"] = { "<cmd>Jaq<cr>", "Run Code (Jaq)" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["r"] = { "<cmd> lua require('searchbox').replace()<cr>", "Replace" },
-  ["R"] = { "<cmd> lua require('searchbox').replace({visual_mode = true})<cr>", "Replace Visual" },
   ["T"] = { "<cmd>TodoQuickFix<cr>", "TODOs" },
 
   p = {
