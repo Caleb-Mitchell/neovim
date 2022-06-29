@@ -97,7 +97,6 @@ local mappings = {
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-  ["h"] = { "<cmd>!firefox %<cr>", "open Html in firefox" },
   ["j"] = { "<cmd>Jaq<cr>", "Run Code (Jaq)" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["r"] = { "<cmd> lua require('searchbox').replace()<cr>", "Replace" },
@@ -173,6 +172,11 @@ local mappings = {
     m = { "<cmd>MarkdownPreviewToggle<cr>", "Markdown Preview Toggle"},
 
     g = { "<cmd>Glow<cr><C-w>z <C-w>|<C-w>_", "Glow" },
+  },
+
+  o = {
+    name = "Open",
+    h = { "<cmd>!firefox %<cr>", "open Html in firefox" },
   },
 
   s = {
