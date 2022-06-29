@@ -83,6 +83,9 @@ keymap("v", "<S-l>", "$", opts)
 -- Assign ctrl-/ to comment out visual blocked lines
 keymap("x", "<C-_>", '<Plug>(comment_toggle_linewise_visual)', opts)
 
+-- Assign r to initiate visual block replace function
+keymap("x", "r", ":lua require('searchbox').replace({visual_mode = true})<cr>", opts)
+
 -- Assign ,y to yank without newlines (useful for wrapped text in markdown files)
 keymap("x", ",y", ":<C-U>let oldtw=&textwidth<cr> :<C-U>set textwidth=1000<cr> gvgqgvy :let &textwidth=oldtw<cr> :set textwidth?<cr> gvgq", opts)
 
