@@ -61,6 +61,7 @@ return packer.startup(function(use)
       {'MunifTanjim/nui.nvim'}
     }
   }
+  use "https://gitlab.com/yorickpeterse/nvim-pqf.git"
 
   -- Formatting
   use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
