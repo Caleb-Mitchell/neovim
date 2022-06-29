@@ -97,7 +97,7 @@ local mappings = {
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-  ["j"] = { "<cmd>Jaq<cr>", "Jaq" },
+  ["j"] = { "<cmd>Jaq<cr>", "Run Code (Jaq)" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["r"] = { "<cmd> lua require('searchbox').replace()<cr>", "Replace" },
   ["R"] = { "<cmd> lua require('searchbox').replace({visual_mode = true})<cr>", "Replace Visual" },
