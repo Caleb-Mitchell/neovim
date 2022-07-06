@@ -1,7 +1,7 @@
 {
 	"PEDAC": {
 		"prefix": "ped",
-    "description": "Display pedac",
+    "description": "Display pedac template",
 		"body": [
 			"=begin\n",
       "== Problem ==",
@@ -22,5 +22,22 @@
       "=end",
       "$9"
 		]
+  },
+  "htmlcaleb": {
+      "prefix": "htmlcaleb",
+      "body": [
+          "<!DOCTYPE html>",
+          "<html lang=\"$1en\">",
+          "\t<head>",
+          "\t\t<title>$2</title>",
+          "\t\t<meta charset=\"UTF-8\">",
+          "\t</head>",
+          "\t<body>",
+          "\t$4",
+          "\t</body>",
+          "</html>"
+      ],
+      "description": "HTML - My WiP html boilterplate",
+      "scope": "text.html"
   }
 }
