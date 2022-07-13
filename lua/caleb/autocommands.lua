@@ -26,7 +26,7 @@ vim.cmd [[
   augroup _markdown
     autocmd!
     autocmd FileType markdown setlocal wrap
-    autocmd BufWinEnter * :set formatoptions+=t
+    autocmd FileType markdown :set formatoptions+=t
     autocmd FileType markdown setlocal spell
   augroup end
 
