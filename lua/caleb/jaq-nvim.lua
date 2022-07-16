@@ -81,7 +81,7 @@ jaqnvim.setup {
 			position = "bot",
 
 			-- Size of quickfix window
-			size     = 10
+			size     = 15
 		}
 	}
 }
