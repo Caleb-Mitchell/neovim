@@ -23,21 +23,35 @@
       "$9"
 		]
   },
-  "htmlcaleb": {
-      "prefix": "htmlcaleb",
+  "html-caleb": {
+      "prefix": "html-caleb",
       "body": [
-          "<!DOCTYPE html>",
-          "<html lang=\"$1en\">",
-          "\t<head>",
-          "\t\t<title>$2</title>",
-          "\t\t<meta charset=\"UTF-8\">",
-          "\t</head>",
-          "\t<body>",
-          "\t$4",
-          "\t</body>",
-          "</html>"
+        "<!DOCTYPE html>",
+        "<html lang=\"$1en\">",
+        "\t<head>",
+        "\t\t<title>$2</title>",
+        "\t\t<meta charset=\"UTF-8\">",
+        "\t</head>",
+        "\t<body>",
+        "\t$4",
+        "\t</body>",
+        "</html>"
       ],
       "description": "HTML - My WiP html boilterplate",
       "scope": "text.html"
+  },
+  "css-reset-caleb": {
+      "prefix": "css-reset-caleb",
+      "body": [
+        "html {",
+          "\tbox-sizing: border-box;",
+        "}",
+        "",
+        "*, *::before, *::after {",
+          "\tbox-sizing: inherit;",
+        "}"
+      ],
+      "description": "CSS - My WiP css reset boilerplate",
+      "scope": "text.css"
   }
 }
