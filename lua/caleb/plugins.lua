@@ -66,7 +66,14 @@ return packer.startup(function(use)
   -- Formatting
   use "mcauley-penney/tidy.nvim" -- Remove trailing ws and empty end lines
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "ur4ltz/surround.nvim" -- Easily surround text
+  use({
+      "kylechui/nvim-surround", -- Easily surround things
+      config = function()
+          require("nvim-surround").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+  })
   use "numToStr/Comment.nvim" -- Easily comment stuff
 
   -- markdown preview
