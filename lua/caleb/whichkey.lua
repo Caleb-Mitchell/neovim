@@ -92,10 +92,7 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["C"] = { "<cmd>DeleteHiddenBuffers<CR>", "Close All Buffers But One" },
   -- ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["f"] = {
-    "<cmd>Telescope find_files<cr>",
-    "Find files",
-  },
+  ["f"] = { "<cmd>Telescope find_files<cr>", "Find files" },
   ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
   ["j"] = { "<cmd>Jaq quickfix<cr>", "Run Code (Jaq)" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
