@@ -1,19 +1,19 @@
 {
-	"PEDAC": {
-		"prefix": "ped",
+  "PEDAC": {
+    "prefix": "ped",
     "description": "Display pedac template",
-		"body": [
-			"=begin\n",
+    "body": [
+      "=begin\n",
       "== Problem ==",
-			"- $1\n",
+      "- $1\n",
       "Input: $2",
       "Output: $3\n",
       "Rules/Requirements",
       "- $4\n",
       "Mental Model",
       "- $5\n",
-			"== Examples/Test Cases ==",
-			"$6\n",
+      "== Examples/Test Cases ==",
+      "$6\n",
       "== Data Structure(s) ==",
       "- $7\n",
       "== Algorithm ==\n",
@@ -21,37 +21,97 @@
       "== Code (with intent) ==",
       "=end",
       "$9"
-		]
+    ]
   },
   "html-caleb": {
-      "prefix": "html-caleb",
-      "body": [
-        "<!DOCTYPE html>",
-        "<html lang=\"$1en\">",
-        "\t<head>",
-        "\t\t<title>$2</title>",
-        "\t\t<meta charset=\"UTF-8\">",
-        "\t</head>",
-        "\t<body>",
-        "\t$4",
-        "\t</body>",
-        "</html>"
-      ],
-      "description": "HTML - My WiP html boilterplate",
-      "scope": "text.html"
+    "prefix": "html-caleb",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"$1en\">",
+      "\t<head>",
+      "\t\t<title>$2</title>",
+      "\t\t<meta charset=\"UTF-8\">",
+      "\t</head>",
+      "\t<body>",
+      "\t$4",
+      "\t</body>",
+      "</html>"
+    ],
+    "description": "HTML - My WiP html boilterplate",
+    "scope": "text.html"
   },
   "css-reset-caleb": {
-      "prefix": "css-reset-caleb",
-      "body": [
-        "html {",
-          "\tbox-sizing: border-box;",
-        "}",
-        "",
-        "*, *::before, *::after {",
-          "\tbox-sizing: inherit;",
-        "}"
-      ],
-      "description": "CSS - My WiP css reset boilerplate",
-      "scope": "text.css"
+    "prefix": "css-reset-caleb",
+    "body": [
+      "html {",
+      "\tbox-sizing: border-box;",
+      "}",
+      "",
+      "*, *::before, *::after {",
+      "\tbox-sizing: inherit;",
+      "}"
+    ],
+    "description": "CSS - My WiP css reset boilerplate",
+    "scope": "text.css"
+  },
+  "state-list-select-ele": {
+    "prefix": "state-list-select-ele",
+    "body": [
+      "<select name='state'>",
+      "\t<option>AK</option>",
+      "\t<option>AL</option>",
+      "\t<option>AR</option>",
+      "\t<option>AZ</option>",
+      "\t<option>CA</option>",
+      "\t<option>CO</option>",
+      "\t<option>CT</option>",
+      "\t<option>DC</option>",
+      "\t<option>DE</option>",
+      "\t<option>FL</option>",
+      "\t<option>GA</option>",
+      "\t<option>HI</option>",
+      "\t<option>IA</option>",
+      "\t<option>ID</option>",
+      "\t<option>IL</option>",
+      "\t<option>IN</option>",
+      "\t<option>KS</option>",
+      "\t<option>KY</option>",
+      "\t<option>LA</option>",
+      "\t<option>MA</option>",
+      "\t<option>MD</option>",
+      "\t<option>ME</option>",
+      "\t<option>MI</option>",
+      "\t<option>MN</option>",
+      "\t<option>MO</option>",
+      "\t<option>MS</option>",
+      "\t<option>MT</option>",
+      "\t<option>NC</option>",
+      "\t<option>ND</option>",
+      "\t<option>NE</option>",
+      "\t<option>NH</option>",
+      "\t<option>NJ</option>",
+      "\t<option>NM</option>",
+      "\t<option>NV</option>",
+      "\t<option>NY</option>",
+      "\t<option>OH</option>",
+      "\t<option>OK</option>",
+      "\t<option>OR</option>",
+      "\t<option>PA</option>",
+      "\t<option>RI</option>",
+      "\t<option>SC</option>",
+      "\t<option>SD</option>",
+      "\t<option>TN</option>",
+      "\t<option>TX</option>",
+      "\t<option>UT</option>",
+      "\t<option>VA</option>",
+      "\t<option>VT</option>",
+      "\t<option>WA</option>",
+      "\t<option>WI</option>",
+      "\t<option>WV</option>",
+      "\t<option>WY</option>",
+      "</select>"
+    ],
+    "description": "CSS - My WiP css reset boilerplate",
+    "scope": "text.css"
   }
 }
