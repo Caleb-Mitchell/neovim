@@ -18,7 +18,7 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Assign ctrl-/ to comment out individual lines
-keymap("n", "<C-_>", "<Plug>(comment_toggle_current_linewise)", opts)
+keymap("n", "<C-_>", ":lua require(\"Comment.api\").toggle.linewise.current()<CR>", opts)
 
 -- Assign / to search with searchbox.nvim instead of builtin search
 keymap("n", "/", ":lua require('searchbox').incsearch()<CR>", opts)
@@ -81,7 +81,7 @@ keymap("v", "<S-l>", "$", opts)
 
 -- Visual Block --
 -- Assign ctrl-/ to comment out visual blocked lines
-keymap("x", "<C-_>", '<Plug>(comment_toggle_linewise_visual)', opts)
+keymap("x", "<C-_>", ":lua require(\"Comment.api\").toggle.linewise(vim.fn.visualmode())<CR>", opts)
 
 -- Assign r to initiate visual block replace function
 keymap("x", "r", ":lua require('searchbox').replace({visual_mode = true})<cr>", opts)
