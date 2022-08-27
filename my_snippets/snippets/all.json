@@ -83,7 +83,10 @@
       "\t\tbackground-color: transparent;",
       "}",
       "abbr { border: none; }",
-      "summary::-webkit-details-marker { display: none; }"
+      "summary::-webkit-details-marker { display: none; }",
+      "",
+      "/*--------------*/",
+      ""
     ],
     "description": "CSS - My WiP css reset boilerplate",
     "scope": "text.css"
