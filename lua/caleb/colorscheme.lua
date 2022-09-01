@@ -3,6 +3,7 @@ try
   " let g:gruvbox_baby_background_color = 'dark'
   let g:gruvbox_baby_transparent_mode = 1
   colorscheme gruvbox-baby
+  highlight Tabline guibg=#fff
   highlight ColorColumn guibg=grey
   highlight QuickFixLine guibg=black
 catch /^Vim\%((\a\+)\)\=:E185/
