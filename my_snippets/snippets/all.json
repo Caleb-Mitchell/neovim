@@ -167,7 +167,7 @@
       "\tStyleGuideBaseURL: https://rubystyle.guide/",
       "\t# What version of the Ruby interpreter is the inspected code intended to",
       "\t# run on? (If there is more than one, set this to the lowest version.)",
-      "\tTargetRubyVersion: 2.4",
+      "\tTargetRubyVersion: 3.1",
       "",
       "Style/BlockComments:",
       "\tDescription: 'Do not use block comments.'",
