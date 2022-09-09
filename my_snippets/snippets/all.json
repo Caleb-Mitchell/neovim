@@ -88,6 +88,38 @@
     "description": "CSS - My WiP css reset boilerplate",
     "scope": "text.css"
   },
+  "erb-lint": {
+    "prefix": "erb-lint",
+    "body": [
+      "---",
+      "EnableDefaultLinters: true",
+      "linters:",
+        "\tErbSafety:",
+          "\t\tenabled: true",
+          "\t\t# better_html_config: .better-html.yml",
+        "\tRubocop:",
+          "\t\tenabled: true",
+          "\t\trubocop_config:",
+            "\t\t\tinherit_from:",
+              "\t\t\t\t- ~/.rubocop.yml",
+            "\t\t\tLayout/InitialIndentation:",
+              "\t\t\t\tEnabled: false",
+            "\t\t\tLayout/LineLength:",
+              "\t\t\t\tEnabled: false",
+            "\t\t\tLayout/TrailingEmptyLines:",
+              "\t\t\t\tEnabled: false",
+            "\t\t\tLayout/TrailingWhitespace:",
+              "\t\t\t\tEnabled: false",
+            "\t\t\tNaming/FileName:",
+              "\t\t\t\tEnabled: false",
+            "\t\t\tStyle/FrozenStringLiteralComment:",
+              "\t\t\t\tEnabled: false",
+            "\t\t\tLint/UselessAssignment:",
+              "\t\t\t\tEnabled: false"
+    ],
+    "description": "erb-lint config template for .erb-lint.yml file",
+    "scope": "text.yml"
+  },
   "state-list-select-ele": {
     "prefix": "state-list-select-ele",
     "body": [
