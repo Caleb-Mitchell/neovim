@@ -105,6 +105,7 @@ return packer.startup(function(use)
 	-- vim plugins (not nvim)
 	use("moll/vim-bbye") -- preserve splits when closing buffers
 	use("arithran/vim-delete-hidden-buffers") -- allow closing all but current buffer
+  use("steven-liou/console-puts") -- provides command: cp which adds console.log / puts to line
 
 	-- Colors
 	use("ellisonleao/gruvbox.nvim")
