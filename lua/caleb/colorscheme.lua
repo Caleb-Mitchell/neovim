@@ -7,7 +7,7 @@ try
   highlight ColorColumn guibg=grey
   highlight QuickFixLine guibg=black
   " highlight current line number in red
-  hi CursorLineNr guifg=red
+  hi CursorLineNr guifg=#e0b233
   set cursorline
   set cursorlineopt=number
 catch /^Vim\%((\a\+)\)\=:E185/
