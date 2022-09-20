@@ -6,6 +6,10 @@ try
   highlight Tabline guibg=#fff guifg=#a99f83
   highlight ColorColumn guibg=grey
   highlight QuickFixLine guibg=black
+  " highlight current line number in red
+  hi CursorLineNr guifg=red
+  set cursorline
+  set cursorlineopt=number
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
