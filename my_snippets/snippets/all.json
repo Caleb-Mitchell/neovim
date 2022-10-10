@@ -120,6 +120,17 @@
     "description": "erb-lint config template for .erb-lint.yml file",
     "scope": "text.yml"
   },
+  "sinatra-sessions": {
+    "prefix": "sinatra-sessions",
+    "body": [
+      "configure do",
+      "\tenable :sessions",
+      "\tset :session_secret, 'secret'",
+      "end"
+    ],
+    "description": "add this to sinatra application code to configure sinatra to use sessions",
+    "scope": "text.rb"
+  },
   "state-list-select-ele": {
     "prefix": "state-list-select-ele",
     "body": [
