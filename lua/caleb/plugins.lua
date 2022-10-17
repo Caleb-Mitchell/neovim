@@ -100,7 +100,7 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
 	use("karb94/neoscroll.nvim")
 
-	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menuone
+	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
 
 	-- vim plugins (not nvim)
 	use("moll/vim-bbye") -- preserve splits when closing buffers
