@@ -62,9 +62,25 @@ return packer.startup(function(use)
 		},
 	})
 	use("https://gitlab.com/yorickpeterse/nvim-pqf.git")
+  -- MiniMap
+  use {
+    'gorbit99/codewindow.nvim',
+    config = function()
+      local codewindow = require('codewindow')
+      codewindow.setup({
+        minimap_width = 20, -- The width of the text part of the minimap
+        width_multiplier = 4, -- How many characters one dot represents
+        use_lsp = true, -- Use the builtin LSP to show errors and warnings
+        use_treesitter = true, -- Use nvim-treesitter to highlight the code
+        exclude_filetypes = {}, -- Choose certain filetypes to not show minimap on
+        z_index = 1, -- The z-index the floating window will be on       exclude_filetypes = {"nvimtree_1"},
+      })
+      codewindow.apply_default_keybinds()
+    end,
+  }
 
-	-- Formatting
-	use("mcauley-penney/tidy.nvim") -- Remove trailing ws and empty end lines
+  -- Formatting
+  use("mcauley-penney/tidy.nvim") -- Remove trailing ws and empty end lines
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use({
 		"kylechui/nvim-surround", -- Easily surround things
