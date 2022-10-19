@@ -133,7 +133,6 @@
   },
   "PEDAC": {
     "prefix": "ped",
-    "description": "Display pedac template",
     "body": [
       "=begin\n",
       "== Problem ==",
@@ -153,7 +152,9 @@
       "== Code (with intent) ==",
       "=end",
       "$9"
-    ]
+    ],
+    "description": "Display pedac template",
+    "scope": "*"
   },
   "sinatra-sessions": {
     "prefix": "sinatra-sessions",
