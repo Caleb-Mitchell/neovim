@@ -117,6 +117,20 @@
     "description": "HTML - My WiP html boilterplate",
     "scope": "text.html"
   },
+  "jquery": {
+    "prefix": "jquery",
+    "body": [
+      "<script> src=''></script>",
+      "",
+      "<script>",
+      "\t$(function() {",
+      "",
+      "\t});",
+      "</script>"
+    ],
+    "description": "Boilerplate code for jquery function",
+    "scope": "*"
+  },
   "PEDAC": {
     "prefix": "ped",
     "description": "Display pedac template",
