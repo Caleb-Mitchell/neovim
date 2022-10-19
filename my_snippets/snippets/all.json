@@ -108,6 +108,9 @@
       "\t\t<!-- comment this out if site is not designed to be responsive -->",
       "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
       "\t\t<link href=\"css/style.css\" rel=\"stylesheet\">",
+      "\t\t<!-- comment this out if site does not use javascript -->",
+      "\t\t<script src='/javascripts/jquery-2.2.4.js'></script>",
+      "\t\t<script src='/javascripts/application.js'></script>",
       "\t</head>",
       "\t<body>",
       "\t$4",
@@ -117,16 +120,12 @@
     "description": "HTML - My WiP html boilterplate",
     "scope": "text.html"
   },
-  "jquery": {
-    "prefix": "jquery",
+  "jquery-action": {
+    "prefix": "jq",
     "body": [
-      "<script src='$1'></script>",
-      "",
-      "<script>",
-      "\t$(function() {",
-      "\t\t$('')",
-      "\t});",
-      "</script>"
+      "$(function() {",
+      "\t$('')",
+      "});"
     ],
     "description": "Boilerplate code for jquery function",
     "scope": "*"
