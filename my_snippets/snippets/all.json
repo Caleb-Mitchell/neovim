@@ -120,7 +120,7 @@
   "jquery": {
     "prefix": "jquery",
     "body": [
-      "<script> src=''></script>",
+      "<script src=''></script>",
       "",
       "<script>",
       "\t$(function() {",
