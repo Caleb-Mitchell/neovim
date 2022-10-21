@@ -7,12 +7,6 @@ vim.cmd [[
     autocmd FileType qf set nobuflisted
   augroup end
 
-  augroup _nvim_minimap
-    "temporary fix to avoid minimap in nvimtree
-    autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree_1" | codewindow.close_minimap() | else | set laststatus=2 | endif 
-    ":TODO make minimap load on launch
-  augroup end
-
   augroup _nvim_treesitter
     autocmd!
     autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
