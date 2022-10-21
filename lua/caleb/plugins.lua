@@ -62,27 +62,21 @@ return packer.startup(function(use)
 		},
 	})
 	use("https://gitlab.com/yorickpeterse/nvim-pqf.git")
-  -- MiniMap
-  use({"petertriho/nvim-scrollbar",
-    config = function()
-    require("scrollbar").setup()
-    end,
-  })
-  use {
-    'gorbit99/codewindow.nvim',
-    config = function()
-      local codewindow = require('codewindow')
-      codewindow.setup({
-        active_in_terminals = false, -- Should the minimap activate for terminal buffers
-        auto_enable = false, -- Automatically open the minimap when entering a (non-excluded) buffer (accepts a table of filetypes)
-        exclude_filetypes = {}, -- Choose certain filetypes to not show minimap on
-      })
-      codewindow.apply_default_keybinds()
-    end,
-  }
-
-  -- Formatting
-  use("mcauley-penney/tidy.nvim") -- Remove trailing ws and empty end lines
+	-- MiniMap
+	use({
+		"gorbit99/codewindow.nvim",
+		config = function()
+			local codewindow = require("codewindow")
+			codewindow.setup({
+				active_in_terminals = false, -- Should the minimap activate for terminal buffers
+				auto_enable = false, -- Automatically open the minimap when entering a (non-excluded) buffer (accepts a table of filetypes)
+				exclude_filetypes = {}, -- Choose certain filetypes to not show minimap on
+			})
+			codewindow.apply_default_keybinds()
+		end,
+	})
+	-- Formatting
+	use("mcauley-penney/tidy.nvim") -- Remove trailing ws and empty end lines
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use({
 		"kylechui/nvim-surround", -- Easily surround things
@@ -123,7 +117,7 @@ return packer.startup(function(use)
 	-- vim plugins (not nvim)
 	use("moll/vim-bbye") -- preserve splits when closing buffers
 	use("arithran/vim-delete-hidden-buffers") -- allow closing all but current buffer
-  use("steven-liou/console-puts") -- provides command: cp which adds console.log / puts to line
+	use("steven-liou/console-puts") -- provides command: cp which adds console.log / puts to line
 
 	-- Colors
 	use("ellisonleao/gruvbox.nvim")
