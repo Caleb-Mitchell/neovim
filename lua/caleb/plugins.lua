@@ -70,13 +70,18 @@ return packer.startup(function(use)
 			codewindow.setup({
 				active_in_terminals = false, -- Should the minimap activate for terminal buffers
 				auto_enable = true, -- Automatically open the minimap when entering a (non-excluded) buffer (accepts a table of filetypes)
-				exclude_filetypes = {'NvimTree', 'alpha'}, -- Choose certain filetypes to not show minimap on
+				exclude_filetypes = { "NvimTree", "alpha" }, -- Choose certain filetypes to not show minimap on
 			})
 			codewindow.apply_default_keybinds()
 		end,
 	})
 	-- Formatting
-	use("mcauley-penney/tidy.nvim") -- Remove trailing ws and empty end lines
+	use({ -- Remove trailing ws and empty end lines
+		"mcauley-penney/tidy.nvim",
+		config = function()
+			require("tidy").setup()
+		end,
+	})
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use({
 		"kylechui/nvim-surround", -- Easily surround things
