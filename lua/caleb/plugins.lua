@@ -69,8 +69,8 @@ return packer.startup(function(use)
 			local codewindow = require("codewindow")
 			codewindow.setup({
 				active_in_terminals = false, -- Should the minimap activate for terminal buffers
-				auto_enable = false, -- Automatically open the minimap when entering a (non-excluded) buffer (accepts a table of filetypes)
-				exclude_filetypes = {}, -- Choose certain filetypes to not show minimap on
+				auto_enable = true, -- Automatically open the minimap when entering a (non-excluded) buffer (accepts a table of filetypes)
+				exclude_filetypes = {'NvimTree'}, -- Choose certain filetypes to not show minimap on
 			})
 			codewindow.apply_default_keybinds()
 		end,
