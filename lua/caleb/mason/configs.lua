@@ -12,7 +12,8 @@ local servers = { "bashls",
                   "solargraph",
                   "html",
                   "cssls",
-                  "tsserver"
+                  "tsserver",
+                  "marksman"
                 }
 
 
