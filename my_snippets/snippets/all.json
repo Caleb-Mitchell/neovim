@@ -157,6 +157,14 @@
     "description": "Display pedac template",
     "scope": "*"
   },
+  "parent-absolute-path": {
+    "prefix": "root",
+    "body": [
+      "root = File.expand_path('..', __FILE__)"
+    ],
+    "description": "gets the absolute path name of the directory of the current file",
+    "scope": "text.rb"
+  },
   "sinatra-sessions": {
     "prefix": "sinatra-sessions",
     "body": [
