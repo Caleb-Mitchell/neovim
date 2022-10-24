@@ -13,7 +13,8 @@ local servers = { "bashls",
                   "html",
                   "cssls",
                   "tsserver",
-                  "marksman"
+                  "marksman",
+                  "gopls"
                 }
 
 
