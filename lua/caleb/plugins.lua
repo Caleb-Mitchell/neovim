@@ -92,6 +92,12 @@ return packer.startup(function(use)
 		end,
 	})
 	use("numToStr/Comment.nvim") -- Easily comment stuff
+	use({ -- Easily toggle booleans with 'ta'
+		"rmagatti/alternate-toggler",
+		config = function()
+			require("tidy").setup()
+		end,
+	})
 
 	-- markdown preview
 	use({

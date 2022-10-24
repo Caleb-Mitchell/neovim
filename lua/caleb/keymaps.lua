@@ -26,6 +26,9 @@ keymap("n", "/", ":lua require('searchbox').incsearch()<CR>", opts)
 -- Assign Space-Space-c to trigger ColorizerToggle
 keymap("n", "<leader><leader>c", ":ColorizerToggle<CR>", opts)
 
+-- Assign ta to triggle ToggleAlternate (toggle Booleans)
+keymap("n", "ta", ":ToggleAlternate<CR>", opts)
+
 -- Assign leader-d + vim direction to navigate windows, or,
 -- if window doesn't exist in that direction, create one.
 keymap("n", "<leader><leader>h", ":call WinMove('h')<CR>", opts)
