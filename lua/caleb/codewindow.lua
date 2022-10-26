@@ -1,5 +1,6 @@
 local status_ok, codewindow = pcall(require, "codewindow")
 if not status_ok then
+  vim.notify("codewindow.lua failed to load", "error")
 	return
 end
 

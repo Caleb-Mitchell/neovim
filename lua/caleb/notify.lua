@@ -1,5 +1,6 @@
 local status_ok, notify = pcall(require, "notify")
 if not status_ok then
+  vim.notify("notify.lua failed to load", "error")
   return
 end
 

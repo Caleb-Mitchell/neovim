@@ -1,5 +1,6 @@
 local status_ok, jaqnvim = pcall(require, "jaq-nvim")
 if not status_ok then
+  vim.notify("jaq-nvim.lua failed to load", "error")
   return
 end
 

@@ -43,7 +43,7 @@ packer.init({
 return packer.startup(function(use)
 	-- My plugins here
 	use("wbthomason/packer.nvim") -- Have packer manage itself
-	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+	use("nvim-lua/plenary.nvim") -- Useful lua functions used in lots of plugins
 	use("nvim-lualine/lualine.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
@@ -55,48 +55,30 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/toggleterm.nvim")
 	use("akinsho/bufferline.nvim")
-	use("VonHeikemen/searchbox.nvim") -- Provide a pop up search/replace box
-	use("MunifTanjim/nui.nvim") -- Dependency of searchbox.nvim
+	use({"VonHeikemen/searchbox.nvim", requires = "MunifTanjim/nui.nvim" }) -- Provide a pop up search/replace box
 	use("https://gitlab.com/yorickpeterse/nvim-pqf.git")
 	use("gorbit99/codewindow.nvim") -- MiniMap
+
 	-- Formatting
 	use("mcauley-penney/tidy.nvim") -- Remove trailing ws and empty end lines
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
-	use({
-		"kylechui/nvim-surround", -- Easily surround things
-		config = function()
-			require("nvim-surround").setup({
-				-- Configuration here, or leave empty to use defaults
-			})
-		end,
-	})
+	use("kylechui/nvim-surround") -- Easily surround things
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("rmagatti/alternate-toggler") -- Easily toggle booleans with 'ta'
 
 	-- markdown preview
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-	})
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" })
 	use({ "ellisonleao/glow.nvim", branch = "main" }) -- Preview markdown in vim window
 
 	-- Eye Candy
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("rcarriga/nvim-notify")
-	use({
-		"folke/todo-comments.nvim", -- Highlight todos, and provide command to search all todos
-		requires = "nvim-lua/plenary.nvim",
-		config = function()
-			require("todo-comments").setup({})
-		end,
-	})
+	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"}) -- Highlight todos, and provide command to search all todos
 	use("j-hui/fidget.nvim")
 	use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
 	use("karb94/neoscroll.nvim")
 
+  -- Code Runner
 	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
 
 	-- vim plugins (not nvim)

@@ -1,7 +1,11 @@
+local status_ok, lualine = pcall(require, "lualine")
+if not status_ok then
+  vim.notify("lualine.lua failed to load", "error")
+  return
+end
 -- Eviline config for lualine
 -- Author: shadmansaleh
 -- Credit: glepnir
-local lualine = require('lualine')
 
 -- Color table for highlights
 -- stylua: ignore

@@ -1,5 +1,6 @@
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
+  vim.notify("whichkey.lua failed to load", "error")
   return
 end
 
