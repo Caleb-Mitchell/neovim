@@ -44,19 +44,19 @@ return packer.startup(function(use)
 	-- My plugins here
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used in lots of plugins
-	use("nvim-lualine/lualine.nvim")
-	use("ahmedkhalf/project.nvim")
-	use("lewis6991/impatient.nvim")
+	use("nvim-lualine/lualine.nvim") -- Nice statusline wrtten in lua
+	use("ahmedkhalf/project.nvim") -- Allow fuzzyfind search by project
+	use("lewis6991/impatient.nvim") -- Startup nvim faster
 
 	-- UI
-	use("goolord/alpha-nvim")
-	use("folke/which-key.nvim")
-	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
-	use("akinsho/toggleterm.nvim")
-	use("akinsho/bufferline.nvim")
+	use("goolord/alpha-nvim") -- Nice splashscreen for nvim
+	use("folke/which-key.nvim") -- Hotkey menu on leader key press
+	use("kyazdani42/nvim-web-devicons") -- Provide icons needed for nvim-tree
+	use("kyazdani42/nvim-tree.lua") -- File Explorer
+	use("akinsho/toggleterm.nvim") -- Toggleable terminal
+	use("akinsho/bufferline.nvim") -- Tab-like buffer display
 	use({"VonHeikemen/searchbox.nvim", requires = "MunifTanjim/nui.nvim" }) -- Provide a pop up search/replace box
-	use("https://gitlab.com/yorickpeterse/nvim-pqf.git")
+	use("https://gitlab.com/yorickpeterse/nvim-pqf.git") -- Pretty Quickfix Menu
 	use("gorbit99/codewindow.nvim") -- MiniMap
 
 	-- Formatting
@@ -66,22 +66,22 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("rmagatti/alternate-toggler") -- Easily toggle booleans with 'ta'
 
-	-- markdown preview
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" })
+	-- Markdown Preview
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" }) -- Preview markdown in browser
 	use({ "ellisonleao/glow.nvim", branch = "main" }) -- Preview markdown in vim window
 
 	-- Eye Candy
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
-	use("rcarriga/nvim-notify")
+	use("rcarriga/nvim-notify") -- Pretty popup windows for messages/notifications
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"}) -- Highlight todos, and provide command to search all todos
-	use("j-hui/fidget.nvim")
+	use("j-hui/fidget.nvim") -- Small loading icon for language server loading
 	use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
-	use("karb94/neoscroll.nvim")
+	use("karb94/neoscroll.nvim") -- Smooth scrolling
 
   -- Code Runner
 	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
 
-	-- vim plugins (not nvim)
+	-- Vim Plugins (not written in lua)
 	use("moll/vim-bbye") -- preserve splits when closing buffers
 	use("arithran/vim-delete-hidden-buffers") -- allow closing all but current buffer
 	use("steven-liou/console-puts") -- provides command: cp which adds console.log / puts to line
@@ -91,7 +91,7 @@ return packer.startup(function(use)
 	use("luisiacc/gruvbox-baby")
 
 	use("folke/lsp-colors.nvim") -- Adds color support for lsp highlighting if needed
-	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
+	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight TODO: may no longer be needed
 	use("norcalli/nvim-colorizer.lua") -- Preview colors in-file
 
 	-- cmp plugins
@@ -111,26 +111,26 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- enable LSP
-	use({ "williamboman/mason.nvim" })
+	use({ "williamboman/mason.nvim" }) -- Lsp/DAP/Linter/Formatter installer
 	use({ "williamboman/mason-lspconfig.nvim" })
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
 	-- Telescope
-	use("nvim-telescope/telescope.nvim")
+	use("nvim-telescope/telescope.nvim") -- Fuzzyfind searching
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("nvim-treesitter/nvim-treesitter-context")
+	use("nvim-treesitter/nvim-treesitter-context") -- Pins current scope to top of buffer
 	use("p00f/nvim-ts-rainbow") -- enable rainbow parentheses
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Vimwiki
-	use("vimwiki/vimwiki")
-	use("michal-h21/vimwiki-sync")
+	use("vimwiki/vimwiki") -- Enables a zettlekasten-like nested wiki in vim
+	use("michal-h21/vimwiki-sync") -- Auto sync vimwiki to github
 
 	-- Git
-	use("lewis6991/gitsigns.nvim")
+	use("lewis6991/gitsigns.nvim") -- Shows git changes per line in sign column
 
 	-- Extra
 	use("seandewar/nvimesweeper") -- Play minesweeper
