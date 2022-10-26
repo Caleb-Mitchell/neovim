@@ -1,4 +1,5 @@
 require "caleb.impatient"
+require "caleb.colorscheme"
 
 require "caleb.alpha"
 require "caleb.autocommands"
@@ -7,7 +8,6 @@ require "caleb.bufferline"
 require "caleb.cmp"
 require "caleb.codewindow"
 require "caleb.colorizer"
-require "caleb.colorscheme"
 require "caleb.comment"
 require "caleb.fidget"
 require "caleb.gitsigns"
