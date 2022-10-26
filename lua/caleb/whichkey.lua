@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-  [";"] = { "<C-^><cr>", "Last Buffer"},
+  [";"] = { "<C-^><cr>", "Last Buffer" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["A"] = { "<cmd>bufdo Bdelete <CR><cmd>Alpha<CR>", "Close All Buffers To Alpha" },
   ["b"] = {
@@ -166,9 +166,10 @@ local mappings = {
 
   m = {
     name = "Markdown",
-    m = { "<cmd>MarkdownPreviewToggle<cr>", "Markdown Preview Toggle"},
+    m = { "<cmd>MarkdownPreviewToggle<cr>", "Markdown Preview Toggle" },
 
     g = { "<cmd>Glow<cr><C-w>z <C-w>|<C-w>_", "Glow" },
+    o = { ":lua require(\"codewindow\").toggle_minimap()<CR>", "Toggle Minimap" },
   },
 
   o = {
@@ -202,7 +203,7 @@ local mappings = {
 
   w = {
     name = "Weather/Wiki",
-    o = { "<cmd>Weather<cr>", "Weather"},
+    o = { "<cmd>Weather<cr>", "Weather" },
   },
   z = {
     name = "Misc/Games",
