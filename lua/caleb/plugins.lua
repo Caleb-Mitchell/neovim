@@ -55,33 +55,12 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/toggleterm.nvim")
 	use("akinsho/bufferline.nvim")
-	use({ -- Provide a pop up search/replace box
-		"VonHeikemen/searchbox.nvim",
-		requires = {
-			{ "MunifTanjim/nui.nvim" },
-		},
-	})
+	use("VonHeikemen/searchbox.nvim") -- Provide a pop up search/replace box
+	use("MunifTanjim/nui.nvim") -- Dependency of searchbox.nvim
 	use("https://gitlab.com/yorickpeterse/nvim-pqf.git")
-	-- MiniMap
-	use({
-		"gorbit99/codewindow.nvim",
-		config = function()
-			local codewindow = require("codewindow")
-			codewindow.setup({
-				active_in_terminals = false, -- Should the minimap activate for terminal buffers
-				auto_enable = false, -- Automatically open the minimap when entering a (non-excluded) buffer (accepts a table of filetypes)
-				exclude_filetypes = { "NvimTree", "alpha", "packer" }, -- Choose certain filetypes to not show minimap on
-			})
-			codewindow.apply_default_keybinds()
-		end,
-	})
+	use("gorbit99/codewindow.nvim") -- MiniMap
 	-- Formatting
-	use({ -- Remove trailing ws and empty end lines
-		"mcauley-penney/tidy.nvim",
-		config = function()
-			require("tidy").setup()
-		end,
-	})
+	use("mcauley-penney/tidy.nvim") -- Remove trailing ws and empty end lines
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use({
 		"kylechui/nvim-surround", -- Easily surround things
