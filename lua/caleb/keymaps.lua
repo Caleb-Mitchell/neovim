@@ -50,6 +50,10 @@ function! WinMove(key)
 endfunction
 ]]
 
+vim.keymap.set("n", "<leader>mo", function ()
+    require("codewindow").toggle_minimap()
+end)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
