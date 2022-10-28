@@ -1,4 +1,5 @@
 require "caleb.impatient"
+require "caleb.plugins"
 require "caleb.colorscheme"
 require "caleb.notify"
 
@@ -26,7 +27,6 @@ require "caleb.nvim-tree"
 require "caleb.nvim-web-devicons"
 require "caleb.options"
 require "caleb.plenary"
-require "caleb.plugins"
 require "caleb.popup"
 require "caleb.pqf"
 require "caleb.project"
