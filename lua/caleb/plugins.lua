@@ -73,10 +73,11 @@ return packer.startup(function(use)
 	-- Eye Candy
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("rcarriga/nvim-notify") -- Pretty popup windows for messages/notifications
-	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"}) -- Highlight todos, and provide command to search all todos
-	use("j-hui/fidget.nvim") -- Small loading icon for language server loading
-	use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
-	use("karb94/neoscroll.nvim") -- Smooth scrolling
+  use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"}) -- Highlight todos, and provide command to search all todos
+  use("j-hui/fidget.nvim") -- Small loading icon for language server loading
+  use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
+  use("karb94/neoscroll.nvim") -- Smooth scrolling
+  use({"folke/drop.nvim", event = "VimEnter"}) -- Silly dashboard/screensaver plugin
 
   -- Code Runner
 	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
