@@ -77,7 +77,6 @@ return packer.startup(function(use)
   use("j-hui/fidget.nvim") -- Small loading icon for language server loading
   use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
   use("karb94/neoscroll.nvim") -- Smooth scrolling
-  use({"folke/drop.nvim", event = "VimEnter"}) -- Silly dashboard/screensaver plugin
 
   -- Code Runner
 	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
