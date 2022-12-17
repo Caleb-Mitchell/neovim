@@ -95,6 +95,7 @@ cmp.setup {
     end, {
       "i",
       "s",
+      "n"
     }),
     ["<C-p>"] = cmp.mapping(function(fallback)
       if luasnip.jumpable(-1) then
@@ -107,6 +108,7 @@ cmp.setup {
     end, {
       "i",
       "s",
+      "n"
     }),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
