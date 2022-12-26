@@ -17,7 +17,8 @@ null_ls.setup({
       }),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-    formatting.shfmt
+    formatting.shfmt,
+    formatting.sqlfluff.with({ extra_args = { "--dialect", "postgres"}})
     -- diagnostics.flake8
 	},
 })
