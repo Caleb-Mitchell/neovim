@@ -80,6 +80,7 @@ return packer.startup(function(use)
 
   -- Code Runner
 	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
+  use({ "mzarnitsa/psql" }) -- provide for psql code runner, under hotkey <leader> -
 
 	-- Vim Plugins (not written in lua)
 	use("moll/vim-bbye") -- preserve splits when closing buffers
