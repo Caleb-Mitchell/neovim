@@ -124,7 +124,7 @@ return packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-context") -- Pins current scope to top of buffer
 	use("p00f/nvim-ts-rainbow") -- enable rainbow parentheses
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-  use("nvim-treesitter/playground")
+  use("nvim-treesitter/playground") -- allow treesitter playground functionality
 
 	-- Vimwiki
 	use("vimwiki/vimwiki") -- Enables a zettlekasten-like nested wiki in vim
