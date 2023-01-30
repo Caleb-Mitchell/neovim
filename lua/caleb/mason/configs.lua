@@ -15,6 +15,7 @@ local servers = { "bashls",
                   "tsserver",
                   "marksman",
                   "gopls",
+                  "pylsp"
                 }
 
 
