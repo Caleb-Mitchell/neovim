@@ -5,3 +5,6 @@ excellent [youtube playlist](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq
 detailing how to build a functional IDE-like neovim setup from scratch in lua.
 
 > `:helptags ALL` will generate help docs for all installed plugins. For example, this enables typing `:h lualine` to get the lualine docs from within nvim.
+
+## Screenshot of splash screen provided by alpha-nvim
+![alpha-nvim splash screen](https://caleb-mitchell.github.io/repo-readme-images/public/images/nvim_config_screenshot.png)
