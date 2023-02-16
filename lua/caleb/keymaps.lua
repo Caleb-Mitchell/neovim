@@ -90,7 +90,7 @@ keymap("x", "<C-_>", ":lua require(\"Comment.api\").toggle.linewise(vim.fn.visua
 keymap("x", "r", ":lua require('searchbox').replace({visual_mode = true})<cr>", opts)
 
 -- Assign ,y to yank without newlines (useful for wrapped text in markdown files)
-keymap("x", ",y", ":<C-U>let oldtw=&textwidth<cr> :<C-U>set textwidth=1000<cr> gvgqgvy :let &textwidth=oldtw<cr> :set textwidth?<cr> gvgq", opts)
+keymap("x", ",y", ":<C-U>let oldtw=&textwidth<cr> :<C-U>set textwidth=1000<cr> gvgwgvy :let &textwidth=oldtw<cr> :set textwidth?<cr> gvgw", opts)
 
 -- Copy to system clipboard in windows/wsl
 keymap("x", "wy", ":'<,'>w !clip.exe<CR><ESC>", opts)
