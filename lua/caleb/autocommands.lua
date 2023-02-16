@@ -27,7 +27,6 @@ vim.cmd [[
     autocmd!
     autocmd FileType markdown setlocal wrap
     autocmd FileType markdown setlocal spell
-    autocmd BufWritePost *.md let g:last_cursor = getpos(".") | execute 'normal! ggVG' | execute 'normal! gw' | call setpos(".", g:last_cursor)
   augroup end
 
   augroup _alpha
