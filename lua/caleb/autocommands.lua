@@ -1,4 +1,29 @@
 vim.cmd [[
+
+  " This function formats markdown files with gw, while ignoring
+  " code fenced by triple backticks
+  function! FormatMarkdown()
+    " Save cursor position
+    let save_cursor = getpos(".")
+    " Ignore text inside fenced code blocks
+    let code_block = 0
+    " Loop through each line of the buffer
+    for i in range(1, line("$"))
+      let line = getline(i)
+      " Check for code block
+      if line =~ '^```'
+        let code_block = !code_block
+      endif
+      " If not in code block, format line
+      if code_block == 0
+        execute "normal! 0"
+        execute "normal! gw$"
+      endif
+    endfor
+    " Restore cursor position
+    call setpos(".", save_cursor)
+  endfunction
+
   augroup _general_settings
     autocmd!
     autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
@@ -27,6 +52,7 @@ vim.cmd [[
     autocmd!
     autocmd FileType markdown setlocal wrap
     autocmd FileType markdown setlocal spell
+    autocmd BufWritePost *.md call FormatMarkdown()
   augroup end
 
   augroup _alpha
