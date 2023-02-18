@@ -1,36 +1,31 @@
 vim.cmd [[
 
+  " This function formats markdown files with gwap, while ignoring
+  " code fenced by triple backticks
   function! FormatMarkdown()
     " Save cursor position
     let save_cursor = getpos(".")
-    " Loop through each paragraph in the buffer
-    let paragraphs = []
-    let current_paragraph = []
-    for line in getline(1, '$')
-      if empty(line)
-        if !empty(current_paragraph)
-          call add(paragraphs, current_paragraph)
-          let current_paragraph = []
-        endif
-      else
-        call add(current_paragraph, line)
+    " Ignore text inside fenced code blocks
+    let code_block = 0
+    let in_code_block = 0
+    " Loop through each line in the buffer
+    for line_num in range(1, line('$'))
+      let line_content = getline(line_num)
+      " Check for code block
+      if line_content =~ '^```' && code_block == 0
+        let code_block = 1
+      elseif line_content =~ '^```' && code_block == 1
+        let code_block = 0
       endif
-    endfor
-    if !empty(current_paragraph)
-      call add(paragraphs, current_paragraph)
-    endif
-    for para in paragraphs
-      let para_lines = para
-      if len(para_lines) > 0
-        let para_first_line = para_lines[0]
-        " Check for code block
-        if para_first_line =~ '^```'
-          " Skip this paragraph if it's inside a code block
-          continue
+      " Format line if not in code block and the previous line was blank
+      if code_block == 0 && (line_content =~# '\v\S' || in_code_block == 1)
+        if line_num > 1 && getline(line_num - 1) =~# '^\s*$'
+          execute "normal! " . (line_num - 1) . "G"
+          execute "normal! gwap"
         endif
-        " Format paragraph
-        execute "normal! " . (line(".") - 1) . "G"
-        execute "normal! gwap"
+        let in_code_block = 0
+      elseif code_block == 1
+        let in_code_block = 1
       endif
     endfor
     " Restore cursor position
