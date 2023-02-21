@@ -46,3 +46,6 @@ DML
 DDL
 subqueries
 PostgreSQL
+ASC
+DESC
+subquery
