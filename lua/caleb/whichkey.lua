@@ -176,6 +176,7 @@ local mappings = {
   o = {
     name = "Open",
     h = { "<cmd>!firefox %<cr>", "open Html in firefox" },
+    g = { "<cmd>ChatGPT<cr>", "ChatGPT" },
   },
 
   s = {

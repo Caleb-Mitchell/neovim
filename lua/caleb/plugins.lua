@@ -47,6 +47,19 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim") -- Nice statusline wrtten in lua
 	use("ahmedkhalf/project.nvim") -- Allow fuzzyfind search by project
 	use("lewis6991/impatient.nvim") -- Startup nvim faster
+	use({
+		"jackMort/ChatGPT.nvim",
+		config = function()
+			require("chatgpt").setup({
+				-- optional configuration
+			})
+		end,
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	})
 
 	-- UI
 	use("goolord/alpha-nvim") -- Nice splashscreen for nvim
@@ -55,7 +68,7 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua") -- File Explorer
 	use("akinsho/toggleterm.nvim") -- Toggleable terminal
 	use("akinsho/bufferline.nvim") -- Tab-like buffer display
-	use({"VonHeikemen/searchbox.nvim", requires = "MunifTanjim/nui.nvim" }) -- Provide a pop up search/replace box
+	use({ "VonHeikemen/searchbox.nvim", requires = "MunifTanjim/nui.nvim" }) -- Provide a pop up search/replace box
 	use("https://gitlab.com/yorickpeterse/nvim-pqf.git") -- Pretty Quickfix Menu
 	use("gorbit99/codewindow.nvim") -- MiniMap
 
@@ -73,14 +86,14 @@ return packer.startup(function(use)
 	-- Eye Candy
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("rcarriga/nvim-notify") -- Pretty popup windows for messages/notifications
-  use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"}) -- Highlight todos, and provide command to search all todos
-  use("j-hui/fidget.nvim") -- Small loading icon for language server loading
-  use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
-  use("karb94/neoscroll.nvim") -- Smooth scrolling
+	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- Highlight todos, and provide command to search all todos
+	use("j-hui/fidget.nvim") -- Small loading icon for language server loading
+	use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
+	use("karb94/neoscroll.nvim") -- Smooth scrolling
 
-  -- Code Runner
+	-- Code Runner
 	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
-  use({ "mzarnitsa/psql" }) -- provide for psql code runner, under hotkey <leader> -
+	use({ "mzarnitsa/psql" }) -- provide for psql code runner, under hotkey <leader> -
 
 	-- Vim Plugins (not written in lua)
 	use("moll/vim-bbye") -- preserve splits when closing buffers
@@ -125,7 +138,7 @@ return packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-context") -- Pins current scope to top of buffer
 	use("p00f/nvim-ts-rainbow") -- enable rainbow parentheses
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-  use("nvim-treesitter/playground") -- allow treesitter playground functionality
+	use("nvim-treesitter/playground") -- allow treesitter playground functionality
 
 	-- Vimwiki
 	use("vimwiki/vimwiki") -- Enables a zettlekasten-like nested wiki in vim
