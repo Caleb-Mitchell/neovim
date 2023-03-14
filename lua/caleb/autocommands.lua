@@ -72,6 +72,10 @@ vim.cmd [[
     autocmd FileType vimwiki set filetype=markdown
   augroup end
 
+  augroup _erb
+    autocmd FileType eruby set filetype=html
+  augroup end
+
   " augroup _indent
   "   autocmd!
   "   autocmd FileType go setlocal shiftwidth=4 tabstop=4
