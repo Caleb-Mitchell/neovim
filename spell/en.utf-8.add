@@ -58,3 +58,5 @@ TODO
 psql
 tmux
 params
+webrick
+metacommand
