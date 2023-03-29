@@ -13,8 +13,8 @@ jaqnvim.setup {
 		-- Uses external commands such as 'g++' and 'cargo'
 		external = {
 			typescript = "deno run %",
-			-- javascript = "node %",
-			javascript = "npm test", -- this is to work with exercism style testing, not sure if I'll want it this way later
+			javascript = "node %",
+			-- javascript = "npm test", -- this is to work with exercism style testing, not sure if I'll want it this way later
 			markdown = "glow %",
 			python = "python3 %",
 			rust = "rustc % && ./$fileBase && rm $fileBase",
