@@ -1,4 +1,24 @@
 {
+  "comment_js": {
+    "prefix": "com-multi-js",
+    "body": [
+      "/*\n",
+      "$1\n",
+      "*/"
+    ],
+    "description": "Multiline comment in JS",
+    "scope": "text.js"
+  },
+  "comment_rb": {
+    "prefix": "com-multi-rb",
+    "body": [
+      "=begin\n",
+      "$1\n",
+      "=end"
+    ],
+    "description": "Multiline comment in Ruby",
+    "scope": "text.rb"
+  },
   "css-reset-caleb": {
     "prefix": "css-reset-caleb",
     "body": [
