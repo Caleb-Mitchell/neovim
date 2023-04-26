@@ -1,5 +1,5 @@
 {
-  "comment_js": {
+  "com_js": {
     "prefix": "com-multi-js",
     "body": [
       "/*\n",
@@ -9,7 +9,7 @@
     "description": "Multiline comment in JS",
     "scope": "text.js"
   },
-  "comment_rb": {
+  "com_rb": {
     "prefix": "com-multi-rb",
     "body": [
       "=begin\n",
