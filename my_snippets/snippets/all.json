@@ -1,24 +1,4 @@
 {
-  "com_js": {
-    "prefix": "com-multi-js",
-    "body": [
-      "/*\n",
-      "$1\n",
-      "*/"
-    ],
-    "description": "Multiline comment in JS",
-    "scope": "text.js"
-  },
-  "com_rb": {
-    "prefix": "com-multi-rb",
-    "body": [
-      "=begin\n",
-      "$1\n",
-      "=end"
-    ],
-    "description": "Multiline comment in Ruby",
-    "scope": "text.rb"
-  },
   "css-reset-caleb": {
     "prefix": "css-reset-caleb",
     "body": [
@@ -151,6 +131,26 @@
     ],
     "description": "Boilerplate code for jquery function",
     "scope": "*"
+  },
+  "multi-line-comment-js": {
+    "prefix": "com-multi-js",
+    "body": [
+      "/*\n",
+      "$1\n",
+      "*/"
+    ],
+    "description": "Multiline comment in JS",
+    "scope": "text.js"
+  },
+  "multi-line-comment-rb": {
+    "prefix": "com-multi-rb",
+    "body": [
+      "=begin\n",
+      "$1\n",
+      "=end"
+    ],
+    "description": "Multiline comment in Ruby",
+    "scope": "text.rb"
   },
   "PEDAC": {
     "prefix": "ped",
