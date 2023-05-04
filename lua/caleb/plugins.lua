@@ -92,6 +92,7 @@ return packer.startup(function(use)
 	use("karb94/neoscroll.nvim") -- Smooth scrolling
 
 	-- Code Runner
+  use 'CRAG666/code_runner.nvim'
 	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
 	use({ "mzarnitsa/psql" }) -- provide for psql code runner, under hotkey <leader> -
 
