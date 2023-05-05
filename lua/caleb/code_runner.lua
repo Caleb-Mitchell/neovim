@@ -5,6 +5,9 @@ if not status_ok then
 end
 
 code_runner.setup {
+  -- mode = "toggle",
+  focus = false,
+  close_key = "<esc>",
   -- put here the commands by filetype
   filetype = {
     java = {
@@ -13,6 +16,7 @@ code_runner.setup {
       "java $fileNameWithoutExt"
     },
     python = "python3 -u",
+    ruby = "ruby",
     typescript = "deno run",
     rust = {
       "cd $dir &&",
