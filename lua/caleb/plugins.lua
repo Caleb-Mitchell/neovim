@@ -61,11 +61,24 @@ return packer.startup(function(use)
 		},
 	})
 
+  -- Neo-tree
+  -- Unless you are still migrating, remove the deprecated commands from v1.x
+  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+      branch = "v2.x",
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+      }
+    }
+
 	-- UI
 	use("goolord/alpha-nvim") -- Nice splashscreen for nvim
 	use("folke/which-key.nvim") -- Hotkey menu on leader key press
 	use("kyazdani42/nvim-web-devicons") -- Provide icons needed for nvim-tree
-	use("kyazdani42/nvim-tree.lua") -- File Explorer
+
 	use("akinsho/toggleterm.nvim") -- Toggleable terminal
 	use("akinsho/bufferline.nvim") -- Tab-like buffer display
 	use({ "VonHeikemen/searchbox.nvim", requires = "MunifTanjim/nui.nvim" }) -- Provide a pop up search/replace box
@@ -92,8 +105,7 @@ return packer.startup(function(use)
 	use("karb94/neoscroll.nvim") -- Smooth scrolling
 
 	-- Code Runner
-  use 'CRAG666/code_runner.nvim'
-	use({ "is0n/jaq-nvim" }) -- Run current code in quickfix menu
+  use({'CRAG666/code_runner.nvim'})
 	use({ "mzarnitsa/psql" }) -- provide for psql code runner, under hotkey <leader> -
 
 	-- Vim Plugins (not written in lua)
