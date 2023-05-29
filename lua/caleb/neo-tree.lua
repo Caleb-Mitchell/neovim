@@ -95,7 +95,16 @@ neotree.setup {
     highlight_separator_active = "NeoTreeTabSeparatorActive",
   },
   --
-  --event_handlers = {
+  event_handlers = {
+    {
+      event = "neo_tree_buffer_enter",
+      handler = function(arg)
+        vim.cmd [[
+          setlocal relativenumber
+        ]]
+      end
+    }
+  },
   --  {
   --    event = "before_render",
   --    handler = function (state)
@@ -130,12 +139,12 @@ neotree.setup {
   --      print(args.source, " moved to ", args.destination)
   --    end
   --  },
-  --  {
-  --    event = "neo_tree_buffer_enter",
-  --    handler = function()
-  --      vim.cmd 'highlight! Cursor blend=100'
-  --    end
-  --  },
+   -- {
+   --   event = "neo_tree_buffer_enter",
+   --   handler = function()
+   --     vim.cmd 'highlight! Cursor blend=100'
+   --   end
+   -- },
   --  {
   --    event = "neo_tree_buffer_leave",
   --    handler = function()
