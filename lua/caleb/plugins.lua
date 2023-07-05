@@ -47,19 +47,6 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim") -- Nice statusline wrtten in lua
 	use("ahmedkhalf/project.nvim") -- Allow fuzzyfind search by project
 	use("lewis6991/impatient.nvim") -- Startup nvim faster
-	use({
-		"jackMort/ChatGPT.nvim",
-		config = function()
-			require("chatgpt").setup({
-				-- optional configuration
-			})
-		end,
-		requires = {
-			"MunifTanjim/nui.nvim",
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-		},
-	})
 
   -- Neo-tree
   -- Unless you are still migrating, remove the deprecated commands from v1.x
