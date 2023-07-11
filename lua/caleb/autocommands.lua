@@ -76,10 +76,10 @@ vim.cmd [[
   "   autocmd!
   "   autocmd FileType go setlocal shiftwidth=4 tabstop=4
   " augroup end
-]]
 
--- Autoformat
--- augroup _lsp
---   autocmd!
---   autocmd BufWritePre * lua vim.lsp.buf.formatting()
--- augroup end
+  " Autoformat
+   augroup _lsp
+     autocmd!
+     autocmd BufWritePre * lua vim.lsp.buf.format()
+   augroup end
+]]
