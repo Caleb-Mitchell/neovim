@@ -41,8 +41,7 @@
       "abbr { border: none; }",
       "summary::-webkit-details-marker { display: none; }"
     ],
-    "description": "CSS - My WiP css reset boilerplate",
-    "scope": "text.css"
+    "description": "CSS - My WiP css reset boilerplate"
   },
   "erb-lint": {
     "prefix": "erb-lint",
@@ -73,8 +72,7 @@
       "\t\t\tLint/UselessAssignment:",
       "\t\t\t\tEnabled: false"
     ],
-    "description": "erb-lint config template for .erb-lint.yml file",
-    "scope": "text.yml"
+    "description": "erb-lint config template for .erb-lint.yml file"
   },
   "form-basic": {
     "prefix": "form-basic",
@@ -94,8 +92,7 @@
       "\t</fieldset>",
       "</form>"
     ],
-    "description": "a basic html/erb form",
-    "scope": "text.rb"
+    "description": "a basic html/erb form"
   },
   "html-caleb": {
     "prefix": "html-caleb",
@@ -117,8 +114,7 @@
       "\t</body>",
       "</html>"
     ],
-    "description": "HTML - My WiP html boilterplate",
-    "scope": "text.html"
+    "description": "HTML - My WiP html boilterplate"
   },
   "jquery-action": {
     "prefix": "jq",
@@ -129,28 +125,17 @@
       "\t});",
       "});"
     ],
-    "description": "Boilerplate code for jquery function",
-    "scope": "*"
+    "description": "Boilerplate code for jquery function"
   },
   "multi-line-comment-js": {
     "prefix": "com-multi-js",
-    "body": [
-      "/*\n",
-      "$1\n",
-      "*/"
-    ],
-    "description": "Multiline comment in JS",
-    "scope": "text.js"
+    "body": ["/*\n", "$1\n", "*/"],
+    "description": "Multiline comment in JS"
   },
   "multi-line-comment-rb": {
     "prefix": "com-multi-rb",
-    "body": [
-      "=begin\n",
-      "$1\n",
-      "=end"
-    ],
-    "description": "Multiline comment in Ruby",
-    "scope": "text.rb"
+    "body": ["=begin\n", "$1\n", "=end"],
+    "description": "Multiline comment in Ruby"
   },
   "PEDAC": {
     "prefix": "ped",
@@ -172,16 +157,12 @@
       "== Code (with intent) ==",
       "$9"
     ],
-    "description": "Display pedac template",
-    "scope": "*"
+    "description": "Display pedac template"
   },
   "parent-absolute-path": {
     "prefix": "root",
-    "body": [
-      "root = File.expand_path('..', __FILE__)"
-    ],
-    "description": "gets the absolute path name of the directory of the current file",
-    "scope": "text.rb"
+    "body": ["root = File.expand_path('..', __FILE__)"],
+    "description": "gets the absolute path name of the directory of the current file"
   },
   "sinatra-sessions": {
     "prefix": "sinatra-sessions",
@@ -191,8 +172,7 @@
       "\tset :session_secret, 'secret'",
       "end"
     ],
-    "description": "add this to sinatra application code to configure sinatra to use sessions",
-    "scope": "text.rb"
+    "description": "add this to sinatra application code to configure sinatra to use sessions"
   },
   "state-list-select-ele": {
     "prefix": "state-list-select-ele",
@@ -251,7 +231,6 @@
       "\t<option>WY</option>",
       "</select>"
     ],
-    "description": "CSS - My WiP css reset boilerplate",
-    "scope": "text.css"
+    "description": "CSS - My WiP css reset boilerplate"
   }
 }
