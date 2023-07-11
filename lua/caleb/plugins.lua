@@ -122,6 +122,37 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-nvim-lua")
   use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }) -- Provide AI powered completion
 
+  -- copilot
+  -- use("github/copilot.vim")
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestion = {
+          auto_trigger = true,
+          keymap = {
+            accept = "<C-f>",
+            dismiss = "<ESC>",
+            next = "<C-l>",
+            prev = "<C-h>",
+          }
+        }
+        -- the following lines are for to make sure copilot_cmp works properly
+        -- suggestion = { enabled = false },
+        -- panel = { enabled = false },
+      })
+    end,
+  }
+  -- use {
+  --   "zbirenbaum/copilot-cmp",
+  --   after = { "copilot.lua" },
+  --   config = function()
+  --     require("copilot_cmp").setup()
+  --   end
+  -- }
+
   -- snippets
   use("L3MON4D3/LuaSnip") --snippet engine
   use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
