@@ -46,7 +46,6 @@ return packer.startup(function(use)
   use("nvim-lua/plenary.nvim") -- Useful lua functions used in lots of plugins
   use("nvim-lualine/lualine.nvim") -- Nice statusline wrtten in lua
   use("ahmedkhalf/project.nvim") -- Allow fuzzyfind search by project
-  use("lewis6991/impatient.nvim") -- Startup nvim faster
 
   -- Neo-tree
   -- Unless you are still migrating, remove the deprecated commands from v1.x

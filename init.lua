@@ -1,4 +1,4 @@
-require "caleb.impatient"
+vim.loader.enable()
 require "caleb.plugins"
 require "caleb.colorscheme"
 require "caleb.notify"
