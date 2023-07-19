@@ -174,8 +174,8 @@ return packer.startup(function(use)
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("nvim-treesitter/nvim-treesitter-context") -- Pins current scope to top of buffer
-  -- use("p00f/nvim-ts-rainbow") -- enable rainbow parentheses
   use("JoosepAlviste/nvim-ts-context-commentstring")
+  use("HiPhish/rainbow-delimiters.nvim")
   -- use("nvim-treesitter/playground") -- allow treesitter playground functionality
 
   -- Vimwiki
