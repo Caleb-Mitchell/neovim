@@ -106,9 +106,8 @@ return packer.startup(function(use)
   use("ellisonleao/gruvbox.nvim")
   use("luisiacc/gruvbox-baby")
 
-  use("folke/lsp-colors.nvim")           -- Adds color support for lsp highlighting if needed
-  use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight TODO: may no longer be needed
-  use("norcalli/nvim-colorizer.lua")     -- Preview colors in-file
+  use("folke/lsp-colors.nvim")       -- Adds color support for lsp highlighting if needed
+  use("norcalli/nvim-colorizer.lua") -- Preview colors in-file
 
   -- cmp plugins
   use("hrsh7th/nvim-cmp")         -- The completion plugin
