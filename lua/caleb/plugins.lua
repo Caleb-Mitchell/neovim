@@ -80,7 +80,7 @@ return packer.startup(function(use)
 
   -- Markdown Preview
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" }) -- Preview markdown in browser
-  use({ "ellisonleao/glow.nvim", branch = "main" })                      -- Preview markdown in vim window
+  use { "ellisonleao/glow.nvim", config = function() require("glow").setup() end }
 
   -- Eye Candy
   use("nvim-lua/popup.nvim")                                              -- An implementation of the Popup API from vim in Neovim
