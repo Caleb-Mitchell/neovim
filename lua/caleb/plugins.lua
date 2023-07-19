@@ -42,10 +42,10 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use("wbthomason/packer.nvim") -- Have packer manage itself
-  use("nvim-lua/plenary.nvim") -- Useful lua functions used in lots of plugins
+  use("wbthomason/packer.nvim")    -- Have packer manage itself
+  use("nvim-lua/plenary.nvim")     -- Useful lua functions used in lots of plugins
   use("nvim-lualine/lualine.nvim") -- Nice statusline wrtten in lua
-  use("ahmedkhalf/project.nvim") -- Allow fuzzyfind search by project
+  use("ahmedkhalf/project.nvim")   -- Allow fuzzyfind search by project
 
   -- Neo-tree
   -- Unless you are still migrating, remove the deprecated commands from v1.x
@@ -61,62 +61,62 @@ return packer.startup(function(use)
   }
 
   -- UI
-  use("goolord/alpha-nvim") -- Nice splashscreen for nvim
-  use("folke/which-key.nvim") -- Hotkey menu on leader key press
-  use("kyazdani42/nvim-web-devicons") -- Provide icons needed for nvim-tree
+  use("goolord/alpha-nvim")                                                -- Nice splashscreen for nvim
+  use("folke/which-key.nvim")                                              -- Hotkey menu on leader key press
+  use("kyazdani42/nvim-web-devicons")                                      -- Provide icons needed for nvim-tree
 
-  use("akinsho/toggleterm.nvim") -- Toggleable terminal
-  use("akinsho/bufferline.nvim") -- Tab-like buffer display
+  use("akinsho/toggleterm.nvim")                                           -- Toggleable terminal
+  use("akinsho/bufferline.nvim")                                           -- Tab-like buffer display
   use({ "VonHeikemen/searchbox.nvim", requires = "MunifTanjim/nui.nvim" }) -- Provide a pop up search/replace box
-  use("https://gitlab.com/yorickpeterse/nvim-pqf.git") -- Pretty Quickfix Menu
-  use("gorbit99/codewindow.nvim") -- MiniMap
+  use("https://gitlab.com/yorickpeterse/nvim-pqf.git")                     -- Pretty Quickfix Menu
+  use("gorbit99/codewindow.nvim")                                          -- MiniMap
 
   -- Formatting
-  use("mcauley-penney/tidy.nvim") -- Remove trailing ws and empty end lines
-  use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
-  use("kylechui/nvim-surround") -- Easily surround things
-  use("numToStr/Comment.nvim") -- Easily comment stuff
+  use("mcauley-penney/tidy.nvim")   -- Remove trailing ws and empty end lines
+  use("windwp/nvim-autopairs")      -- Autopairs, integrates with both cmp and treesitter
+  use("kylechui/nvim-surround")     -- Easily surround things
+  use("numToStr/Comment.nvim")      -- Easily comment stuff
   use("rmagatti/alternate-toggler") -- Easily toggle booleans with 'ta'
 
   -- Markdown Preview
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install" }) -- Preview markdown in browser
-  use({ "ellisonleao/glow.nvim", branch = "main" }) -- Preview markdown in vim window
+  use({ "ellisonleao/glow.nvim", branch = "main" })                      -- Preview markdown in vim window
 
   -- Eye Candy
-  use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
-  use("rcarriga/nvim-notify") -- Pretty popup windows for messages/notifications
+  use("nvim-lua/popup.nvim")                                              -- An implementation of the Popup API from vim in Neovim
+  use("rcarriga/nvim-notify")                                             -- Pretty popup windows for messages/notifications
   use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- Highlight todos, and provide command to search all todos
   use {
-    "j-hui/fidget.nvim", -- Small loading icon for language server loading
+    "j-hui/fidget.nvim",                                                  -- Small loading icon for language server loading
     tag = 'legacy'
   }
   use("lukas-reineke/indent-blankline.nvim") -- Add visual for line column indentation
-  use("karb94/neoscroll.nvim") -- Smooth scrolling
+  use("karb94/neoscroll.nvim")               -- Smooth scrolling
 
   -- Code Runner
   use({ 'CRAG666/code_runner.nvim' })
   use({ "mzarnitsa/psql" }) -- provide for psql code runner, under hotkey <leader> -
 
   -- Vim Plugins (not written in lua)
-  use("moll/vim-bbye") -- preserve splits when closing buffers
+  use("moll/vim-bbye")                      -- preserve splits when closing buffers
   use("arithran/vim-delete-hidden-buffers") -- allow closing all but current buffer
-  use("steven-liou/console-puts") -- provides command: cp which adds console.log / puts to line
+  use("steven-liou/console-puts")           -- provides command: cp which adds console.log / puts to line
 
   -- Colors
   use("ellisonleao/gruvbox.nvim")
   use("luisiacc/gruvbox-baby")
 
-  use("folke/lsp-colors.nvim") -- Adds color support for lsp highlighting if needed
+  use("folke/lsp-colors.nvim")           -- Adds color support for lsp highlighting if needed
   use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight TODO: may no longer be needed
-  use("norcalli/nvim-colorizer.lua") -- Preview colors in-file
+  use("norcalli/nvim-colorizer.lua")     -- Preview colors in-file
 
   -- cmp plugins
-  use("hrsh7th/nvim-cmp") -- The completion plugin
-  use("hrsh7th/cmp-buffer") -- buffer completions
-  use("hrsh7th/cmp-path") -- path completions
-  use("hrsh7th/cmp-cmdline") -- cmdline completions
+  use("hrsh7th/nvim-cmp")         -- The completion plugin
+  use("hrsh7th/cmp-buffer")       -- buffer completions
+  use("hrsh7th/cmp-path")         -- path completions
+  use("hrsh7th/cmp-cmdline")      -- cmdline completions
   use("saadparwaiz1/cmp_luasnip") -- snippet completions
-  use("f3fora/cmp-spell") -- vim spellsuggest completion
+  use("f3fora/cmp-spell")         -- vim spellsuggest completion
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lua")
   use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }) -- Provide AI powered completion
@@ -162,10 +162,10 @@ return packer.startup(function(use)
   use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
   -- LSP
-  use("neovim/nvim-lspconfig") -- enable LSP
-  use({ "williamboman/mason.nvim" }) -- Lsp/DAP/Linter/Formatter installer
+  use("neovim/nvim-lspconfig")           -- enable LSP
+  use({ "williamboman/mason.nvim" })     -- Lsp/DAP/Linter/Formatter installer
   use({ "williamboman/mason-lspconfig.nvim" })
-  use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
+  use("tamago324/nlsp-settings.nvim")    -- language server settings defined in json for
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
   -- Telescope
@@ -174,21 +174,21 @@ return packer.startup(function(use)
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("nvim-treesitter/nvim-treesitter-context") -- Pins current scope to top of buffer
-  use("p00f/nvim-ts-rainbow") -- enable rainbow parentheses
+  -- use("p00f/nvim-ts-rainbow") -- enable rainbow parentheses
   use("JoosepAlviste/nvim-ts-context-commentstring")
-  use("nvim-treesitter/playground") -- allow treesitter playground functionality
+  -- use("nvim-treesitter/playground") -- allow treesitter playground functionality
 
   -- Vimwiki
-  use("vimwiki/vimwiki") -- Enables a zettlekasten-like nested wiki in vim
+  use("vimwiki/vimwiki")         -- Enables a zettlekasten-like nested wiki in vim
   use("michal-h21/vimwiki-sync") -- Auto sync vimwiki to github
 
   -- Git
   use("lewis6991/gitsigns.nvim") -- Shows git changes per line in sign column
 
   -- Extra
-  use("seandewar/nvimesweeper") -- Play minesweeper
+  use("seandewar/nvimesweeper")     -- Play minesweeper
   use("seandewar/killersheep.nvim") -- Play killer sheep
-  use("ellisonleao/weather.nvim") -- Display weather in pop up
+  use("ellisonleao/weather.nvim")   -- Display weather in pop up
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
