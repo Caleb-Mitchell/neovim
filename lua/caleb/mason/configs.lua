@@ -11,13 +11,14 @@ local servers = { "bashls",
   "lua_ls",
   "solargraph",
   "html",
-  "cssls",
   "tsserver",
   "marksman",
   "gopls",
   "pylsp",
   "elixirls",
-  "eslint"
+  "eslint",
+  "prismals",
+  "tailwindcss"
 }
 
 
