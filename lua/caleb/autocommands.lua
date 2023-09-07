@@ -32,6 +32,12 @@ vim.cmd [[
     call setpos(".", save_cursor)
   endfunction
 
+  " enable autochdir
+  augroup _autochdir
+    autocmd!
+    autocmd VimEnter * :set autochdir
+  augroup end
+
   augroup _general_settings
     autocmd!
     autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
@@ -65,10 +71,12 @@ vim.cmd [[
 
   augroup _alpha
     autocmd!
+    " remove tabline from alpha buffer
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
 
   augroup _vimwiki
+    " set vimwiki filetype to markdown
     autocmd FileType vimwiki set filetype=markdown
   augroup end
 
