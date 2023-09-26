@@ -80,6 +80,12 @@ vim.cmd [[
     autocmd FileType vimwiki set filetype=markdown
   augroup end
 
+  augroup _copilot
+    " disable copilot by default
+    autocmd!
+    autocmd VimEnter * :Copilot disable
+  augroup end
+
   " augroup _indent
   "   autocmd!
   "   autocmd FileType go setlocal shiftwidth=4 tabstop=4
