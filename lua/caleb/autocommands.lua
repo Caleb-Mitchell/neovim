@@ -33,10 +33,10 @@ vim.cmd [[
   endfunction
 
   " enable autochdir
-  augroup _autochdir
-    autocmd!
-    autocmd VimEnter * :set autochdir
-  augroup end
+  " augroup _autochdir
+  "   autocmd!
+  "   autocmd VimEnter * :set autochdir
+  " augroup end
 
   augroup _general_settings
     autocmd!
