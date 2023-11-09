@@ -18,7 +18,8 @@ local servers = { "bashls",
   "elixirls",
   "eslint",
   "prismals",
-  "tailwindcss"
+  "tailwindcss",
+  "astro"
 }
 
 
