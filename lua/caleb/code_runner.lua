@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 code_runner.setup {
-  -- mode = "toggle",
+  mode = "toggleterm",
   focus = false,
   close_key = "<esc>",
   -- put here the commands by filetype
