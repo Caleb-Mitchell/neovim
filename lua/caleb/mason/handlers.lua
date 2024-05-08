@@ -86,6 +86,7 @@ end
 M.on_attach = function(client, bufnr)
   if client.name == "tsserver" then
     client.server_capabilities.document_formatting = false
+    client.server_capabilities.document_linting = false
   end
   if client.name == "sumneko_lua" then
     client.server_capabilities.document_formatting = false
